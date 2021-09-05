@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "npx webpack-dev-server",
-    "build-old": "webpack --mode production",
-    "start-old": "webpack-dev-server --open --mode development"
+    "start": "npx webpack-dev-server"
   },
   "author": "Diego Luna <diegofcolunalopez@gmail.com>",
   "license": "MIT",

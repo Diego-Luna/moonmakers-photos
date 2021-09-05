@@ -1,0 +1,31 @@
+.BotomBlue {
+  width: 100%;
+  min-width: 120px;
+  max-width: 200px;
+  height: 100%;
+  padding: 8px;
+  background-color: var(--color-blue-light);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .2s,box-shadow .2s,color .2s;
+}
+
+.BotomBlue__text {
+  font-size: 120%;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.BotomBlue:hover {
+  background-color: #185abc;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+@media (min-width: 1024px) and (max-height: 700px) {
+  .BotomBlue {
+    transform: scale(0.8);
+  }
+}
