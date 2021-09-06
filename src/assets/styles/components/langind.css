@@ -1,0 +1,28 @@
+.secction {
+  width: 100vw;
+  height: 100vh;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color-one);
+}
+
+.secction p {
+  color: var(--font-color-two);
+  font-size: 16px;
+}
+
+.intro {
+  height: 91vh;
+  text-align: center;
+}
+
+.intro div {
+  margin-bottom: 5%;
+}
+h1 {
+  font-size: 350%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}

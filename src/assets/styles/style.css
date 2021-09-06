@@ -9,3 +9,35 @@ body {
 * {
   font-family: "Open Sans", sans-serif;
 }
+
+h2 {
+  font-size: 31px;
+}
+
+.container {
+  padding: 5%;
+  width: 90vw;
+  height: 90vh;
+}
+
+.container-secction-small,
+.container-secction-normal,
+.container-secction-big {
+  padding: 2%;
+}
+
+.container-secction-small {
+  width: 33%;
+}
+
+.container-secction-big {
+  width: 67%;
+}
+
+.container-secction-normal {
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
