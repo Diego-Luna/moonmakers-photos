@@ -31,7 +31,7 @@ function Menu({ enPhotos }) {
       {enPhotos ? (
         <User />
       ) : (
-        <div className="user--container">
+        <div className="button-containe">
           <BotomBlue
             className="user--container"
             url="/photos"

@@ -1,7 +1,8 @@
 import React from "react";
+import LogoUser from "../../assets/icons/user.png"
 
 function SeccionUser() {
-  return <div className="user--container" >user</div>;
+  return <button className="user--container" > <img src={LogoUser} alt="Logo user" /> </button>;
 }
 
 export default SeccionUser;

@@ -22,9 +22,55 @@ a img {
 .search-container {
   width: 65%;
   height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+.search-container img {
+  width: 100%;
+}
+.search-container_input {
+  width: 60%;
+  height: 48px;
+  margin-right: 15%;
+  margin-left: 5%;
+
+  display: flex;
+  align-items: center;
+  background: var(--color-gray);
+  border-radius: 8px;
+  padding: 0 10px;
+}
+.search-container_input input {
+  background-color: var(--color-gray);
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.icon-searh,
+.icon-container {
+  width: 40px;
+  height: 40px;
+  margin-left: 2%;
+  margin-right: 2%;
+  background: transparent;
+  border: none;
+}
+
+.icon-searh {
+  width: 30px;
+  height: 30px;
 }
 
 .user--container {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+
+.button-container {
   width: 15%;
   text-align: center;
 }
