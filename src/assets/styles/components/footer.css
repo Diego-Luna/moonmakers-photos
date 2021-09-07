@@ -1,0 +1,28 @@
+footer {
+  background-color: var(--color-gray_two);
+  width: 100vw;
+  padding-bottom: 5%;
+}
+
+ol {
+  margin: 0;
+  padding-left: 5%;
+}
+
+li {
+  color: var(--font-color-two);
+}
+
+footer figure {
+  width: 25%;
+  min-width: 100px;
+  max-width: 300px;
+  margin: 0;
+  padding-left: 5%;
+  padding-top: 5%;
+  margin-bottom: 2%;
+}
+
+footer figure img {
+  width: 100%;
+}

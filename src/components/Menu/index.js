@@ -5,6 +5,7 @@ import Search from "./Search";
 import User from "./SeccionUser";
 
 import MoonMakerPhotos from "../../assets/img/MoonMakers.png";
+// import "../../assets/styles/components/menu.css";
 import "../../assets/styles/components/menu.css";
 import BotomBlue from "../General/Buttons/BotomBlue";
 

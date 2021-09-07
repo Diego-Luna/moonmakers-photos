@@ -3,6 +3,12 @@ import React from "react";
 import BotomBlue from "../General/Buttons/BotomBlue";
 import "../../assets/styles/components/langind.css";
 
+import ImgPhote from "../../assets/img/devices_mobile.jpg";
+import ImgTablet from "../../assets/img/tablet.jpg";
+import ImgSearch from "../../assets/img/img_34.webp";
+import imgCompartir from "../../assets/img/img_38.webp";
+import imgEditar from "../../assets/img/img_40.webp";
+
 function LangindUI() {
   return (
     <React.Fragment>
@@ -27,32 +33,47 @@ function LangindUI() {
             disfruta de ellos en cualquier dispositivo
           </p>
         </div>
-        <ficture className="container-secction-big img-container">
+        <figure className="container-secction-big img-container">
           {/* imagen de telefonos a computadoras */}
-        </ficture>
+          <img
+            className="img-h-2"
+            src={ImgPhote}
+            alt="imagen de ejemplo de tus fotos en telefono"
+          />
+          <img
+            className="img-w-2"
+            src={ImgTablet}
+            alt="imagen de ejemplo de tus fotos en tableta"
+          />
+        </figure>
       </section>
 
       {/* Encuentra fotos mas rapido */}
       <section className="secction container">
         <div className="text-center">
-          <ficture className="img-container">{/* logo de busqueda */}</ficture>
+          <figure className="img-container">{/* logo de busqueda */}</figure>
           <h2>Encuentra las fotos mas rapido</h2>
           <p>
             Tus fotos se organizan automaticamente y están <br /> disponibles
             para busquedas para que las encuentres <br /> facilmente
           </p>
-          <ficture className="img-container">
+          <figure className="img-container-in-three ImgSearch-container">
             {/* imagen de ejemplo de computadora */}
-          </ficture>
+            <img
+              className="ImgSearch"
+              src={ImgSearch}
+              alt="ejemplo de busqueda en las fotos por AI"
+            />
+          </figure>
         </div>
       </section>
 
       {/* Guarda y comparte fácilmente lo que realmente te importa */}
       <section className="secction container">
         <div>
-          <ficture className="img-container">
+          <figure className="img-container">
             {/* logo de compartir en familia */}
-          </ficture>
+          </figure>
 
           <h2 className="text-center">
             Guarda y comparte facilmente <br /> lo que realmente te importa
@@ -60,7 +81,13 @@ function LangindUI() {
 
           <p>Comparte fotos y álbumes con amigos y familiares.</p>
 
-          <ficture className="img-container">{/* compartir fotos */}</ficture>
+          <figure className="img-container">
+            <img
+              className="mg-w-2"
+              src={imgCompartir}
+              alt="ejemplo de compartir imagenes"
+            />
+          </figure>
         </div>
       </section>
 
@@ -75,17 +102,22 @@ function LangindUI() {
             edición y los filtros inteligentes
           </p>
         </div>
-        <ficture className="container-secction-big img-container">
+        <figure className="container-secction-big img-container">
           {/* imagen de ejemplo de computadora */}
-        </ficture>
+          <img
+            className="mg-w-2"
+            src={imgEditar}
+            alt="Imagen de ejemplo de editar"
+          />
+        </figure>
       </section>
 
       {/* Saca el máximo partido de tus recuerdos con Google Fotos */}
       <section className="secction container">
         <div className="text-center">
-          <ficture className="img-container">
+          <figure className="img-container">
             {/* Logo de MoonMakers Photos */}
-          </ficture>
+          </figure>
           <h2>
             Saca el máximo partido de tus recuerdos <br /> con Google Fotos
           </h2>

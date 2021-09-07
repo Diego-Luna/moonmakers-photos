@@ -26,3 +26,34 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
+.img-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+}
+
+
+.img-h-2 {
+  height: 90%;
+  width: auto;
+  max-width: 50%;
+}
+
+.img-w-2 {
+  height: auto;
+  width: auto;
+  max-width: 550px;
+  max-height: 600px;
+  object-fit: contain;
+  /* max-height: 90%; */
+}
+
+.ImgSearch-container{
+  width: 100;
+  height: 200px;
+}
+.ImgSearch{
+height: 100%;
+}
