@@ -47,4 +47,9 @@ h2 {
   display: flex;
 }
 
-
+.svg-blue {
+  fill: var(--color-blue-light);
+}
+.svg-gray {
+  fill: var(--font-color-two);
+}

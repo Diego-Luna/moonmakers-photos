@@ -5,7 +5,14 @@ import { StateContex } from "../../../state";
 
 import "../../../assets/styles/components/General/botomStateGray.css";
 
-function BotomStateGray({ varState, stateReference, icon, alt, text }) {
+function BotomStateGray({
+  varState,
+  stateReference,
+  icon,
+  alt,
+  text,
+  children,
+}) {
   //  pasamos a nuestro react hook el contexto de nuestra aplicacion
   const { ChangeValueBotonsOnOff } = React.useContext(StateContex);
 
@@ -15,7 +22,7 @@ function BotomStateGray({ varState, stateReference, icon, alt, text }) {
       className={`BotomStateGray  ${varState ? "botonOn" : "botonOff"}`}
     >
       <figure className="icon-container-h icon-container-menu">
-        <img src={icon} alt={alt} />
+        {children} {/* <img src={icon} alt={alt} /> */}
       </figure>
       {text}
     </button>
