@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // importamos neustro contexto
 import { StateContex } from "../../../state";
@@ -17,15 +18,21 @@ function BotomStateGray({
   const { ChangeValueBotonsOnOff } = React.useContext(StateContex);
 
   return (
-    <button
-      onClick={() => ChangeValueBotonsOnOff(stateReference)}
-      className={`BotomStateGray  ${varState ? "botonOn" : "botonOff"}`}
+    <Link
+      to={`${
+        (stateReference === "fotos") ? "/photos/" : `/photos/${stateReference}`
+      }`}
     >
-      <figure className="icon-container-h icon-container-menu">
-        {children} {/* <img src={icon} alt={alt} /> */}
-      </figure>
-      {text}
-    </button>
+      <button
+        onClick={() => ChangeValueBotonsOnOff(stateReference)}
+        className={`BotomStateGray  ${varState ? "botonOn" : "botonOff"}`}
+      >
+        <figure className="icon-container-h icon-container-menu">
+          {children}
+        </figure>
+        {text}
+      </button>
+    </Link>
   );
 }
 

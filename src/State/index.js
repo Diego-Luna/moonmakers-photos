@@ -14,9 +14,18 @@ function StateProvider(props) {
 
   // Estado de los botones del sup menu de photos
   const [stateBotons, setStateBotons] = React.useState({
-    fotos: true,
-    explorar: false,
-    compartido: false,
+    fotos: {
+      value: true,
+      alldata: [],
+    },
+    explorar: {
+      value: false,
+      data: [],
+    },
+    compartido: {
+      value: false,
+      data: [],
+    },
     favoritos: {
       value: false,
       listFavoritos: [],
@@ -25,7 +34,10 @@ function StateProvider(props) {
       value: false,
       listAlbumes: [],
     },
-    utilidades: false,
+    utilidades: {
+      value: false,
+      data: [],
+    },
     archivo: {
       value: false,
       listArchivo: [],
@@ -37,26 +49,36 @@ function StateProvider(props) {
   });
 
   const ChangeValueBotonsOnOff = (value) => {
-    console.log("click");
-
     if (value === "fotos" && stateBotons.fotos === false) {
       console.log("en el if de fotos");
       setStateBotons({
-        fotos: true,
-        explorar: false,
-        compartido: false,
+        fotos: {
+          value: true,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: false,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: false,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: false,
+        utilidades: {
+          value: false,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: false,
@@ -69,21 +91,33 @@ function StateProvider(props) {
       console.log("en el if de explorar");
 
       setStateBotons({
-        fotos: false,
-        explorar: true,
-        compartido: false,
+        fotos: {
+          value: false,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: true,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: false,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: false,
+        utilidades: {
+          value: false,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: false,
@@ -95,21 +129,33 @@ function StateProvider(props) {
       console.log("en el if de compartido");
 
       setStateBotons({
-        fotos: false,
-        explorar: false,
-        compartido: true,
+        fotos: {
+          value: false,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: false,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: true,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: false,
+        utilidades: {
+          value: false,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: false,
@@ -121,21 +167,33 @@ function StateProvider(props) {
       console.log("en el if de favoritos");
 
       setStateBotons({
-        fotos: false,
-        explorar: false,
-        compartido: false,
+        fotos: {
+          value: false,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: false,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: false,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: true,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: false,
+        utilidades: {
+          value: false,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: false,
@@ -147,21 +205,33 @@ function StateProvider(props) {
       console.log("en el if de albumes");
 
       setStateBotons({
-        fotos: false,
-        explorar: false,
-        compartido: false,
+        fotos: {
+          value: false,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: false,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: false,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: true,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: false,
+        utilidades: {
+          value: false,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: false,
@@ -173,21 +243,33 @@ function StateProvider(props) {
       console.log("en el if de utilidades");
 
       setStateBotons({
-        fotos: false,
-        explorar: false,
-        compartido: false,
+        fotos: {
+          value: false,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: false,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: false,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: true,
+        utilidades: {
+          value: true,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: false,
@@ -199,21 +281,33 @@ function StateProvider(props) {
       console.log("en el if de archivo");
 
       setStateBotons({
-        fotos: false,
-        explorar: false,
-        compartido: false,
+        fotos: {
+          value: false,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: false,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: false,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: false,
+        utilidades: {
+          value: false,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: true,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: false,
@@ -225,21 +319,33 @@ function StateProvider(props) {
       console.log("en el if de papelera");
 
       setStateBotons({
-        fotos: false,
-        explorar: false,
-        compartido: false,
+        fotos: {
+          value: false,
+          alldata: stateBotons.fotos.alldata,
+        },
+        explorar: {
+          value: false,
+          data: stateBotons.explorar.data,
+        },
+        compartido: {
+          value: false,
+          data: stateBotons.compartido.data,
+        },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.data,
+          listFavoritos: stateBotons.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.data,
+          listAlbumes: stateBotons.albumes.listAlbumes,
         },
-        utilidades: false,
+        utilidades: {
+          value: false,
+          data: stateBotons.utilidades.data,
+        },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.value,
+          listArchivo: stateBotons.archivo.listArchivo,
         },
         papelera: {
           value: true,

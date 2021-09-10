@@ -12,7 +12,7 @@ import BotomBlue from "../General/Buttons/BotomBlue";
 function Menu({ enPhotos }) {
   const URLLogo = () => {
     if (enPhotos) {
-      return "/photos";
+      return "/photos/";
     } else {
       return "/";
     }
@@ -35,7 +35,7 @@ function Menu({ enPhotos }) {
         <div className="button-containe">
           <BotomBlue
             className="user--container"
-            url="/photos"
+            url="/photos/"
             text="Ir a MoonMakers Fotos"
           />
         </div>

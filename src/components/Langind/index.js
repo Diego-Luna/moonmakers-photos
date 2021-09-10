@@ -18,7 +18,7 @@ function LangindUI() {
           <h1>
             El hogar de tus <br /> recuerdos
           </h1>
-          <BotomBlue url="/photos" text="Ir a MoonMakers Fotos" />
+          <BotomBlue url="/photos/" text="Ir a MoonMakers Fotos" />
         </div>
       </section>
 
@@ -121,7 +121,7 @@ function LangindUI() {
           <h2>
             Saca el máximo partido de tus recuerdos <br /> con Google Fotos
           </h2>
-          <BotomBlue url="/photos" text="Ir a MoonMakers Fotos" />
+          <BotomBlue url="/photos/" text="Ir a MoonMakers Fotos" />
         </div>
       </section>
     </React.Fragment>
