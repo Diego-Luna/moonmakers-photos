@@ -41,3 +41,10 @@ h2 {
 .text-center {
   text-align: center;
 }
+
+.container-fotos {
+  height: 85vh;
+  display: flex;
+}
+
+

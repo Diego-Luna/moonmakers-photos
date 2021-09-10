@@ -9,7 +9,7 @@ nav {
   background-color: white;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #dadce0;
 }
 .logo--container {
   width: 20%;

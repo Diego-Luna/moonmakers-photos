@@ -1,8 +1,12 @@
 :root {
   --color-blue-light: #1a73e8;
   --color-blue-dark: #185abc;
+  --color-blue-background: #D2E3FC;
   --color-gray: #f1f3f4;
   --color-gray_two: #f8f9fa;
   --font-color-one: #202124;
   --font-color-two: #5f6368;
+  --font-fotos: #3c4043;
+  --font-fotos-dark: #80868b;
+  --font-color-hover: #1A73E8;
 }

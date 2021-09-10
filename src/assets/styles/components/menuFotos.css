@@ -1,0 +1,35 @@
+.menuFotos {
+  height: calc(100% - 25px);
+  width: 20%;
+  padding-top: 25px;
+}
+
+.menuFotos-elements {
+  padding-left: 0;
+  list-style: none;
+  display: block;
+}
+
+.icon-container img {
+  width: 100%;
+}
+.icon-container-h img{
+  height: 100%;
+}
+
+.icon-container-menu {
+  width: 41px;
+  height: 20px;
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
+.menuFotos p {
+  padding-left: 20px;
+  font-size: 15px;
+  font-variant: all-small-caps;
+  color: var(--font-fotos-dark);
+}
+
+
