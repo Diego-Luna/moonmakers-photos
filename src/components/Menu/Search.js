@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // importamos neustro contexto
-import { StateContex } from "../../State";
+import { StateContex } from "../../state";
 
 import LogoHelp from "../../assets/icons/help.png";
 import LogoUpload from "../../assets/icons/upload.png";

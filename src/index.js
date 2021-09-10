@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./routes/App";
 
 // importamos nuestro provider, (el estado de nuestra web app)
-import { StateProvider } from "./State/index";
+import { StateProvider } from "./state/index";
 
 import "./assets/styles/style.css";
 
