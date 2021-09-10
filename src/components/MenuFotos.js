@@ -10,73 +10,50 @@ import IconTest from "../assets/icons/help.png";
 
 function MenuFotos() {
   //  pasamos a nuestro react hook el contexto de nuestra aplicacion
-  const { stateBotons, ChangeValueBotonsOnOff } = React.useContext(StateContex);
+  const { stateBotons } = React.useContext(StateContex);
 
   console.log("stateBotons: ", stateBotons);
 
   return (
     <div className="menuFotos">
       <div className="menuFotos-elements">
-        <button
-          onClick={() => ChangeValueBotonsOnOff("fotos")}
-          className={`BotomStateGray  ${
-            stateBotons.fotos ? "botonOn" : "botonOff"
-          }`}
-        >
-          <figure className="icon-container-h icon-container-menu">
-            <img src={IconTest} alt="icono de fotos" />
-          </figure>
-          Fotos
-        </button>
-        {/* no */}
-        {/* <BotomStateGray
+        <BotomStateGray
           varState={stateBotons.fotos}
           stateReference={"fotos"}
           text="Fotos"
           icon={IconTest}
           alt="icono de fotos"
-        /> */}
+        />
 
-        <button
-          onClick={() => ChangeValueBotonsOnOff("explorar")}
-          className={`BotomStateGray  ${
-            stateBotons.explorar ? "botonOn" : "botonOff"
-          }`}
-        >
-          <figure className="icon-container-h icon-container-menu">
-            <img src={IconTest} alt="icono de fotos" />
-          </figure>
-          explorar
-        </button>
-        {/* <BotomStateGray
+        <BotomStateGray
           varState={stateBotons.explorar}
           stateReference={"explorar"}
           text="Explorar"
           icon={IconTest}
           alt="icono de fotos"
-        /> */}
+        />
 
-        {/* <BotomStateGray
+        <BotomStateGray
           varState={stateBotons.compartido}
           stateReference={"compartido"}
           text="Compartido"
           icon={IconTest}
           alt="icono de fotos"
-        /> */}
+        />
       </div>
 
       <p className="menuFotos-elements">Biblioteca</p>
 
       <div className="menuFotos-elements">
-        {/* <BotomStateGray
+        <BotomStateGray
           varState={stateBotons.favoritos.value}
           stateReference={"favoritos"}
           text="Favoritos"
           icon={IconTest}
           alt="icono de fotos"
-        /> */}
+        />
 
-        {/* <BotomStateGray
+        <BotomStateGray
           varState={stateBotons.albumes.value}
           stateReference={"albumes"}
           text="Albumes"
@@ -106,7 +83,7 @@ function MenuFotos() {
           text="Papelera"
           icon={IconTest}
           alt="icono de fotos"
-        /> */}
+        />
       </div>
     </div>
   );

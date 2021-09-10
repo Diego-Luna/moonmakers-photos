@@ -16,149 +16,237 @@ function StateProvider(props) {
   const [stateBotons, setStateBotons] = React.useState({
     fotos: true,
     explorar: false,
+    compartido: false,
+    favoritos: {
+      value: false,
+      listFavoritos: [],
+    },
+    albumes: {
+      value: false,
+      listAlbumes: [],
+    },
+    utilidades: false,
+    archivo: {
+      value: false,
+      listArchivo: [],
+    },
+    papelera: {
+      value: false,
+      listPapelera: [],
+    },
   });
-  // const [stateBotons, setStateBotons] = React.useState({
-  //   fotos: true,
-  //   explorar: false,
-  //   compartido: false,
-  //   favoritos: {
-  //     value: false,
-  //     listFavoritos: [],
-  //   },
-  //   albumes: {
-  //     value: false,
-  //     listAlbumes: [],
-  //   },
-  //   utilidades: false,
-  //   archivo: {
-  //     value: false,
-  //     listArchivo: [],
-  //   },
-  //   papelera: {
-  //     value: false,
-  //     listPapelera: [],
-  //   },
-  // });
 
   const ChangeValueBotonsOnOff = (value) => {
     console.log("click");
 
-    console.log(value);
+    if (value === "fotos" && stateBotons.fotos === false) {
+      console.log("en el if de fotos");
+      setStateBotons({
+        fotos: true,
+        explorar: false,
+        compartido: false,
+        favoritos: {
+          value: false,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: false,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: false,
+        archivo: {
+          value: false,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: false,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
 
-    // let copiaEstadoValores = stateBotons;
+    if (value === "explorar") {
+      console.log("en el if de explorar");
 
-    // switch (value) {
-    //   case "fotos":
-    //     copiaEstadoValores.fotos = true;
-    //     copiaEstadoValores.explorar = false;
-    //     copiaEstadoValores.compartido = false;
-    //     copiaEstadoValores.favoritos.value = false;
-    //     copiaEstadoValores.albumes.value = false;
-    //     copiaEstadoValores.utilidades = false;
-    //     copiaEstadoValores.archivo = false;
-    //     copiaEstadoValores.papelera.value = false;
+      setStateBotons({
+        fotos: false,
+        explorar: true,
+        compartido: false,
+        favoritos: {
+          value: false,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: false,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: false,
+        archivo: {
+          value: false,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: false,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
+    if (value === "compartido") {
+      console.log("en el if de compartido");
 
-    //     break;
+      setStateBotons({
+        fotos: false,
+        explorar: false,
+        compartido: true,
+        favoritos: {
+          value: false,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: false,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: false,
+        archivo: {
+          value: false,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: false,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
+    if (value === "favoritos") {
+      console.log("en el if de favoritos");
 
-    //   case "explorar":
-    //     copiaEstadoValores.fotos = false;
-    //     copiaEstadoValores.explorar = true;
-    //     copiaEstadoValores.compartido = false;
-    //     copiaEstadoValores.favoritos.value = false;
-    //     copiaEstadoValores.albumes.value = false;
-    //     copiaEstadoValores.utilidades = false;
-    //     copiaEstadoValores.archivo = false;
-    //     copiaEstadoValores.papelera.value = false;
-    //     break;
+      setStateBotons({
+        fotos: false,
+        explorar: false,
+        compartido: false,
+        favoritos: {
+          value: true,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: false,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: false,
+        archivo: {
+          value: false,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: false,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
+    if (value === "albumes") {
+      console.log("en el if de albumes");
 
-    //   case "compartido":
-    //     copiaEstadoValores.fotos = false;
-    //     copiaEstadoValores.explorar = false;
-    //     copiaEstadoValores.compartido = true;
-    //     copiaEstadoValores.favoritos.value = false;
-    //     copiaEstadoValores.albumes.value = false;
-    //     copiaEstadoValores.utilidades = false;
-    //     copiaEstadoValores.archivo = false;
-    //     copiaEstadoValores.papelera.value = false;
+      setStateBotons({
+        fotos: false,
+        explorar: false,
+        compartido: false,
+        favoritos: {
+          value: false,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: true,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: false,
+        archivo: {
+          value: false,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: false,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
+    if (value === "utilidades") {
+      console.log("en el if de utilidades");
 
-    //     break;
+      setStateBotons({
+        fotos: false,
+        explorar: false,
+        compartido: false,
+        favoritos: {
+          value: false,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: false,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: true,
+        archivo: {
+          value: false,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: false,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
+    if (value === "archivo") {
+      console.log("en el if de archivo");
 
-    //   case "favoritos":
-    //     copiaEstadoValores.fotos = false;
-    //     copiaEstadoValores.explorar = false;
-    //     copiaEstadoValores.compartido = false;
-    //     copiaEstadoValores.favoritos.value = true;
-    //     copiaEstadoValores.albumes.value = false;
-    //     copiaEstadoValores.utilidades = false;
-    //     copiaEstadoValores.archivo = false;
-    //     copiaEstadoValores.papelera.value = false;
-    //     break;
+      setStateBotons({
+        fotos: false,
+        explorar: false,
+        compartido: false,
+        favoritos: {
+          value: false,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: false,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: false,
+        archivo: {
+          value: true,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: false,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
+    if (value === "papelera") {
+      console.log("en el if de papelera");
 
-    //   case "albumes":
-    //     copiaEstadoValores.fotos = false;
-    //     copiaEstadoValores.explorar = false;
-    //     copiaEstadoValores.compartido = false;
-    //     copiaEstadoValores.favoritos.value = false;
-    //     copiaEstadoValores.albumes.value = true;
-    //     copiaEstadoValores.utilidades = false;
-    //     copiaEstadoValores.archivo = false;
-    //     copiaEstadoValores.papelera.value = false;
-    //     break;
-
-    //   case "utilidades":
-    //     copiaEstadoValores.fotos = false;
-    //     copiaEstadoValores.explorar = false;
-    //     copiaEstadoValores.compartido = false;
-    //     copiaEstadoValores.favoritos.value = false;
-    //     copiaEstadoValores.albumes.value = false;
-    //     copiaEstadoValores.utilidades = true;
-    //     copiaEstadoValores.archivo = false;
-    //     copiaEstadoValores.papelera.value = false;
-    //     break;
-
-    //   case "archivo":
-    //     copiaEstadoValores.fotos = false;
-    //     copiaEstadoValores.explorar = false;
-    //     copiaEstadoValores.compartido = false;
-    //     copiaEstadoValores.favoritos.value = false;
-    //     copiaEstadoValores.albumes.value = false;
-    //     copiaEstadoValores.utilidades = false;
-    //     copiaEstadoValores.archivo = true;
-    //     copiaEstadoValores.papelera.value = false;
-    //     break;
-
-    //   case "papelera":
-    //     copiaEstadoValores.fotos = false;
-    //     copiaEstadoValores.explorar = false;
-    //     copiaEstadoValores.compartido = false;
-    //     copiaEstadoValores.favoritos.value = false;
-    //     copiaEstadoValores.albumes.value = false;
-    //     copiaEstadoValores.utilidades = false;
-    //     copiaEstadoValores.archivo = false;
-    //     copiaEstadoValores.papelera.value = true;
-    //     break;
-
-    //   default:
-    //     break;
-    // }
-
-    // console.log("copiaEstadoValores", copiaEstadoValores);
-
-    // // setStateBotons(value);
-    // if (value === "fotos" && stateBotons.fotos === "false") {
-    // setStateBotons({
-    //   fotos: true,
-    //   explorar: false,
-    // });
-
-    // } else if (value === "explorar") {
-    //   setStateBotons({
-    //     fotos: false,
-    //     explorar: true,
-    //   });
-    // }
-
-    console.log("-stateBotons: ", stateBotons);
+      setStateBotons({
+        fotos: false,
+        explorar: false,
+        compartido: false,
+        favoritos: {
+          value: false,
+          listFavoritos: stateBotons.favoritos.data,
+        },
+        albumes: {
+          value: false,
+          listAlbumes: stateBotons.albumes.data,
+        },
+        utilidades: false,
+        archivo: {
+          value: false,
+          listArchivo: stateBotons.archivo.value,
+        },
+        papelera: {
+          value: true,
+          listPapelera: stateBotons.papelera.listPapelera,
+        },
+      });
+    }
   };
 
   const CambiarValorSearch = (value) => {
