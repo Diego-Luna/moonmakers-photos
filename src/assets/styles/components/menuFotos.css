@@ -11,9 +11,10 @@
 }
 
 .icon-container img {
-  width: 100%;
+  /* width: 100%; */
+  width: 24px;
 }
-.icon-container-h img{
+.icon-container-h img {
   height: 100%;
 }
 
@@ -23,6 +24,7 @@
   margin: 0;
   background: transparent;
   border: none;
+  text-align: left;
 }
 
 .menuFotos p {
@@ -31,5 +33,3 @@
   font-variant: all-small-caps;
   color: var(--font-fotos-dark);
 }
-
-
