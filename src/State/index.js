@@ -13,7 +13,7 @@ function StateProvider(props) {
   });
 
   // Estado de los botones del sup menu de photos
-  const [stateBotons, setStateBotons] = React.useState({
+  const [stateFotos, setStateFotos] = React.useState({
     fotos: {
       value: true,
       alldata: [],
@@ -49,40 +49,40 @@ function StateProvider(props) {
   });
 
   const ChangeValueBotonsOnOff = (value) => {
-    if (value === "fotos" && stateBotons.fotos === false) {
+    if (value === "fotos" && stateFotos.fotos === false) {
       console.log("en el if de fotos");
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: true,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: false,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: false,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: false,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: false,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
@@ -90,266 +90,266 @@ function StateProvider(props) {
     if (value === "explorar") {
       console.log("en el if de explorar");
 
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: false,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: true,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: false,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: false,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: false,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
     if (value === "compartido") {
       console.log("en el if de compartido");
 
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: false,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: false,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: true,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: false,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: false,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
     if (value === "favoritos") {
       console.log("en el if de favoritos");
 
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: false,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: false,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: false,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: true,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: false,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: false,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
     if (value === "albumes") {
       console.log("en el if de albumes");
 
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: false,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: false,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: false,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: true,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: false,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: false,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
     if (value === "utilidades") {
       console.log("en el if de utilidades");
 
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: false,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: false,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: false,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: true,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: false,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
     if (value === "archivo") {
       console.log("en el if de archivo");
 
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: false,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: false,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: false,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: false,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: true,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: false,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
     if (value === "papelera") {
       console.log("en el if de papelera");
 
-      setStateBotons({
+      setStateFotos({
         fotos: {
           value: false,
-          alldata: stateBotons.fotos.alldata,
+          alldata: stateFotos.fotos.alldata,
         },
         explorar: {
           value: false,
-          data: stateBotons.explorar.data,
+          data: stateFotos.explorar.data,
         },
         compartido: {
           value: false,
-          data: stateBotons.compartido.data,
+          data: stateFotos.compartido.data,
         },
         favoritos: {
           value: false,
-          listFavoritos: stateBotons.favoritos.listFavoritos,
+          listFavoritos: stateFotos.favoritos.listFavoritos,
         },
         albumes: {
           value: false,
-          listAlbumes: stateBotons.albumes.listAlbumes,
+          listAlbumes: stateFotos.albumes.listAlbumes,
         },
         utilidades: {
           value: false,
-          data: stateBotons.utilidades.data,
+          data: stateFotos.utilidades.data,
         },
         archivo: {
           value: false,
-          listArchivo: stateBotons.archivo.listArchivo,
+          listArchivo: stateFotos.archivo.listArchivo,
         },
         papelera: {
           value: true,
-          listPapelera: stateBotons.papelera.listPapelera,
+          listPapelera: stateFotos.papelera.listPapelera,
         },
       });
     }
@@ -367,7 +367,7 @@ function StateProvider(props) {
     <StateContex.Provider
       value={{
         search,
-        stateBotons,
+        stateFotos,
         CambiarValorSearch,
         ChangeValueBotonsOnOff,
       }}
