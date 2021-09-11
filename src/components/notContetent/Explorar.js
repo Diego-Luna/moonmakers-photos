@@ -2,7 +2,10 @@ import React from "react";
 
 function Explorar() {
   return (
-    <div>
+    <div className="container-secction-fotos">
+      <div className="fotos-suptitle-container">
+        <h2 className="fotos-suptitle">Explorar</h2>
+      </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="329"
@@ -338,6 +341,10 @@ function Explorar() {
           </linearGradient>
         </defs>
       </svg>
+      <h3 className="container-secction-fotos_h3" >Vuelve pronto</h3>
+      <p className="container-secction-fotos_p" >
+        Estamos organizando tus fotos para que las encuentres más rápidamente
+      </p>
     </div>
   );
 }

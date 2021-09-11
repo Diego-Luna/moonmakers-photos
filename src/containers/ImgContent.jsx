@@ -5,13 +5,13 @@ import { useParams } from "react-router-dom";
 import NotContentFotos from "../components/notContetent/FotosAll";
 import NotContentSearch from "../components/notContetent/Explorar";
 
+import "../assets/styles/container/ImgContent.css"
+
 function ImgContent() {
   const { name } = useParams();
   console.log("url: ", name);
 
   const { stateFotos } = React.useContext(StateContex);
-
-  console.log("stateFotos en imgcontainer: ", stateFotos);
 
   if (stateFotos.fotos.alldata && stateFotos.fotos.value === true) {
     return (

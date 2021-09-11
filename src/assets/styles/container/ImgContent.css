@@ -1,0 +1,30 @@
+.container-secction-fotos {
+  height: 100%;
+  width: 95%;
+  padding-left: 5%;
+}
+
+.fotos-suptitle-container {
+  height: 56px;
+  border-bottom: 1px solid #dadce0;
+  align-items: center;
+  background: #fff;
+  display: flex;
+}
+.fotos-suptitle {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 100;
+  color: #202124;
+}
+
+.container-secction-fotos_h3 {
+  color: #3c4043;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.container-secction-fotos_p {
+  color: #5f6368;
+  font-size: 14px;
+}
