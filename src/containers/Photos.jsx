@@ -1,4 +1,5 @@
 import React from "react";
+import ImgContent from "./ImgContent.jsx";
 import Menu from "../components/Menu";
 import MenuFotos from "../components/MenuFotos";
 
@@ -14,9 +15,7 @@ function Photos() {
       <Menu enPhotos={true} />
       <div className="container-fotos">
         <MenuFotos />
-        <div style={{ width: "80%" }}>
-          <p>URL : {name}</p>
-        </div>
+        <ImgContent />
       </div>
     </div>
   );
