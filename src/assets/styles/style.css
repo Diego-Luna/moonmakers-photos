@@ -63,7 +63,10 @@ h2 {
   text-align: center;
 }
 
-
-.conteiner-photos-content{
+.conteiner-photos-content {
   width: 80%;
+}
+
+.height-vh {
+  height: 100vh;
 }

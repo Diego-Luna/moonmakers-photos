@@ -1,0 +1,17 @@
+.notfound-container{
+  width: 50%;
+  height: 50%;
+  min-height: 255px;
+  display: flex;
+}
+
+.notfound-container p{
+  text-align: left;
+}
+
+.img-container-notfound {
+  width: 40%;
+}
+.img-container-notfound img {
+  width: 100%;
+}
