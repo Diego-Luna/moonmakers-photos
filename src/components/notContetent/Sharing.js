@@ -23,15 +23,15 @@ function Sharing() {
         <path
           d="M208.25 100.75l82.998-56.14"
           stroke="#3C4043"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
         />
         <path
           d="M188.666 195.107s16.477-22.903-2.87-34.282c-21.948-12.865-66.955 13.304-69.918-7.873-2.251-16.163 36.583-5.421 38.322-20.305 1.813-15.527-34.376-23.494-24.755-37.715 9.457-13.971 47.641 21.241 74.162 8.613"
           stroke="#9AA0A6"
-          stroke-width="2"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-dasharray="0.01 6"
+          strokeWidth="2"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
+          strokeDasharray="0.01 6"
         />
       </svg>
       <p className="container-secction-fotos_p">
