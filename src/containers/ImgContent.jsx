@@ -27,7 +27,7 @@ function ImgContent() {
   }
   if (stateFotos.explorar.data && stateFotos.explorar.value === true) {
     return (
-      <div className="center-all" style={{ width: "80%" }}>
+      <div className="" style={{ width: "80%" }}>
         <NotContentSearch />
       </div>
     );
