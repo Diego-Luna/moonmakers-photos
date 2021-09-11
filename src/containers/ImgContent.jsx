@@ -2,7 +2,8 @@ import React from "react";
 import { StateContex } from "../state";
 import { useParams } from "react-router-dom";
 
-import NotContentFortos from "../components/notContetent/FotosAll"
+import NotContentFotos from "../components/notContetent/FotosAll";
+import NotContentSearch from "../components/notContetent/Explorar";
 
 function ImgContent() {
   const { name } = useParams();
@@ -10,13 +11,20 @@ function ImgContent() {
 
   const { stateFotos } = React.useContext(StateContex);
 
-  if (stateFotos.fotos.alldata) {
-    return (
-      <div className="center-all" style={{ width: "80%" }}>
-       <NotContentFortos />
-      </div>
-    );
-  }
+  // if (stateFotos.fotos.alldata) {
+  //   return (
+  //     <div className="center-all" style={{ width: "80%" }}>
+  //       <NotContentFotos />
+  //     </div>
+  //   );
+  // }
+  // if (stateFotos.explorar.data) {
+  //   return (
+  //     <div className="center-all" style={{ width: "80%" }}>
+  //       <NotContentSearch />
+  //     </div>
+  //   );
+  // }
 
   return (
     <div style={{ width: "80%" }}>

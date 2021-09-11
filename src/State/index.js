@@ -49,7 +49,7 @@ function StateProvider(props) {
   });
 
   const ChangeValueBotonsOnOff = (value) => {
-    if (value === "fotos" && stateFotos.fotos === false) {
+    if (value === "fotos" && stateFotos.fotos.value === false) {
       console.log("en el if de fotos");
       setStateFotos({
         fotos: {
@@ -353,6 +353,9 @@ function StateProvider(props) {
         },
       });
     }
+
+    console.log("value :", value);
+    console.log("stateFotos: ", stateFotos);
   };
 
   const CambiarValorSearch = (value) => {
