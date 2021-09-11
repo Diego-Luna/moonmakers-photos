@@ -20,21 +20,21 @@ function ImgContent() {
 
   if (stateFotos.fotos.alldata && stateFotos.fotos.value === true) {
     return (
-      <div className="center-all" style={{ width: "80%" }}>
+      <div className="center-all conteiner-photos-content">
         <NotContentFotos />
       </div>
     );
   }
   if (stateFotos.explorar.data && stateFotos.explorar.value === true) {
     return (
-      <div className="" style={{ width: "80%" }}>
+      <div className="conteiner-photos-content">
         <NotContentSearch />
       </div>
     );
   }
   if (stateFotos.compartido.data && stateFotos.compartido.value === true) {
     return (
-      <div className="center-all" style={{ width: "80%" }}>
+      <div className="center-all conteiner-photos-content">
         <NotContentSharing />
       </div>
     );
@@ -44,14 +44,14 @@ function ImgContent() {
     stateFotos.favoritos.value === true
   ) {
     return (
-      <div className="center-all" style={{ width: "80%" }}>
+      <div className="center-all conteiner-photos-content">
         <NotContentFavoritos />
       </div>
     );
   }
   if (stateFotos.albumes.listAlbumes && stateFotos.albumes.value === true) {
     return (
-      <div className="center-all" style={{ width: "80%" }}>
+      <div className="center-all conteiner-photos-content">
         <NotContentAlbums />
       </div>
     );
@@ -59,7 +59,7 @@ function ImgContent() {
 
   if (stateFotos.archivo.listArchivo && stateFotos.archivo.value === true) {
     return (
-      <div className="center-all" style={{ width: "80%" }}>
+      <div className="center-all conteiner-photos-content">
         <NotContentArchive />
       </div>
     );
@@ -67,7 +67,7 @@ function ImgContent() {
 
   if (stateFotos.papelera.listPapelera && stateFotos.papelera.value === true) {
     return (
-      <div className="center-all" style={{ width: "80%" }}>
+      <div className="center-all conteiner-photos-content">
         <NotContentTrash />
       </div>
     );
