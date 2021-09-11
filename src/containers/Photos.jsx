@@ -8,7 +8,6 @@ import { useParams } from 'react-router-dom'
 
 function Photos() {
   const { name } = useParams();
-  console.log("url: ", name);
 
   return (
     <div>

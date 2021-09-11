@@ -10,45 +10,45 @@ function Explorar() {
         fill="none"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M94.27 118.725c-.853-6.589-6.331-11.678-12.979-11.678-1.396 0-2.74.23-4.002.645-.663-11.048-9.59-19.799-20.51-19.799-1.661 0-3.274.207-4.821.59C48.279 82.77 41.972 79 34.806 79c-11.352 0-20.554 9.455-20.554 21.118 0 1.71.203 3.372.577 4.964a12.91 12.91 0 00-1.453-.087c-7.238 0-13.106 6.029-13.106 13.466 0 .089.01.175.013.264h93.986z"
           fill="url(#paint0_linear)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M328.27 121.725c-.853-6.589-6.331-11.678-12.979-11.678-1.396 0-2.74.23-4.002.645-.663-11.048-9.59-19.799-20.51-19.799-1.661 0-3.274.207-4.821.59C282.279 85.77 275.973 82 268.806 82c-11.352 0-20.554 9.455-20.554 21.118 0 1.71.203 3.372.577 4.964a12.898 12.898 0 00-1.453-.087c-7.238 0-13.106 6.029-13.106 13.466 0 .089.011.175.013.264h93.987z"
           fill="url(#paint1_linear)"
         />
         <path
           opacity=".9"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M236.358 96.53c-1.171-8.823-8.694-15.634-17.823-15.634-1.917 0-3.762.306-5.496.862-.911-14.79-13.17-26.504-28.166-26.504-2.281 0-4.496.277-6.621.789-5.051-7.648-13.712-12.695-23.554-12.695-15.589 0-28.227 12.657-28.227 28.27 0 2.29.279 4.515.793 6.647a18.139 18.139 0 00-1.995-.117c-9.94 0-17.999 8.071-17.999 18.028 0 .119.015.234.018.353h129.07z"
           fill="url(#paint2_linear)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M68.688 48.043l-8.004-4.622s-4.568 4.573-1.254 6.43c3.313 1.858 5.68 3.28 7.676 4.433-1.514-3.493 1.582-6.241 1.582-6.241z"
           fill="#4285F4"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M147.206 63.08l15.503-2.733s6.116 18.314-.28 19.293c-6.397.978-11.003 1.94-14.869 2.621 3.925-7.735-.354-19.18-.354-19.18z"
           fill="#EA4335"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M119.238 51.316s1.002 11.358.33 11.427c-.673.068-11.501 0-15.682 1.3 0 0-.616-9.1-.616-11.77 0 0 6.921-1.368 15.968-.957z"
           fill="#FCC934"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M218.094 79.784l6.812 18.717s-21.477 11.646-24.102 3.89-4.835-13.284-6.534-17.95c10.502 3.19 23.824-4.657 23.824-4.657z"
           fill="#34A853"
         />
@@ -89,8 +89,8 @@ function Explorar() {
           fill="#F1F3F4"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M207.924 127.369l39.484-1.499s6.38 23.305-9.841 23.739c-16.221.434-28.023 1.064-37.868 1.437 13.336-9.058 8.225-23.677 8.225-23.677z"
           fill="#81C995"
         />
@@ -103,13 +103,13 @@ function Explorar() {
           height="27"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M207.924 127.369l39.484-1.499s6.38 23.305-9.841 23.739c-16.221.434-28.023 1.064-37.868 1.437 13.336-9.058 8.225-23.677 8.225-23.677z"
             fill="#A8DAB5"
           />
         </mask>
-        <g mask="url(#a)" fill-rule="evenodd" clip-rule="evenodd">
+        <g mask="url(#a)" fillRule="evenodd" clipRule="evenodd">
           <path
             d="M244.455 131.753l-4.665.164-.06 2.022-3.888.136.08-2.696-3.888.136-.04 1.348-1.518-1.213.043-1.429-.778.027-.042 1.429-1.593 1.322-.121 4.044-2.11.109.037-1.247-2.269-2.042-2.396 2.205-.096 3.213c-.047 1.565-3.945 2.047-3.888.136l.099-3.314-2.888.137-.041 1.348-3.332.081.201-6.741-8.776.272-.502 16.851 48.21-1.687.422-14.154-6.221.217.02-.674z"
             fill="#34A853"
@@ -120,32 +120,32 @@ function Explorar() {
           />
         </g>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M170.049 95.104L145.6 108.785s12.182 32.132 22.102 26.281c9.92-5.851 17.352-9.71 23.448-13.121-14.117-6.247-21.101-26.841-21.101-26.841z"
           fill="#EA4335"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M156.658 122.358c-.138-.375-.386-.849-.529-1.214a10.548 10.548 0 01-.472-1.919 10.668 10.668 0 01-.074-2.121c.058-.735.191-1.463.397-2.172.265-.859.639-1.681 1.113-2.444.369-.576.791-1.114 1.262-1.609.431-.447.902-.855 1.406-1.218.465-.328.957-.616 1.471-.862.47-.214.956-.392 1.453-.531a9.69 9.69 0 011.389-.304l.082-.03c1.258-.053 2.292.846 3.471 3.026-5.017.714-10.014 4.384-11.158 8.181a4.282 4.282 0 00.173 3.251"
           fill="#FAD2CF"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M164.179 107.895c.357-.038.843-.077 1.205-.098a10.022 10.022 0 014.318.892c.689.306 1.342.688 1.946 1.14a9.781 9.781 0 011.911 1.929c.33.44.625.904.88 1.391-.945-1.82-3.457-2.762-6.801-2.261-1.179-2.179-2.215-3.087-3.471-3.026"
           fill="#EE675C"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M167.02 127.696a10.007 10.007 0 01-5.585-.79 10.068 10.068 0 01-1.946-1.14 9.753 9.753 0 01-1.911-1.929c-.33-.439-.625-.904-.88-1.391l-.036-.097a4.28 4.28 0 01-.174-3.25c1.144-3.797 6.143-7.457 11.156-8.18 3.395 6.959 2.504 16.216-.607 16.771"
           fill="#F28B82"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M174.445 113.186c.144.391.412.895.564 1.283.217.624.375 1.266.472 1.919.095.703.12 1.413.074 2.12a10.83 10.83 0 01-.397 2.172c-.265.859-.639 1.68-1.113 2.443-.368.575-.79 1.114-1.261 1.609-.432.446-.902.854-1.405 1.217-.466.327-.958.616-1.471.861a9.91 9.91 0 01-1.453.532 9.846 9.846 0 01-1.388.304c3.397-.835 3.723-10.394.607-16.769 3.343-.5 5.855.441 6.8 2.261"
           fill="#fff"
         />
@@ -153,7 +153,7 @@ function Explorar() {
           d="M80.033 74.325l.43.138c.565.178 1.395.436 2.457.753 2.123.635 5.174 1.508 8.89 2.46 7.329 1.88 17.246 4.07 27.716 5.359l-6.103 31.58-.074-.014-1.313-.243c-1.13-.21-2.744-.512-4.679-.879a1177.28 1177.28 0 01-14.144-2.764c-5.125-1.037-10.221-2.118-13.983-3.029-1.883-.455-3.423-.866-4.463-1.205-.524-.171-.902-.317-1.132-.436l-.054-.029c.045-.125.09-.277.137-.44.089-.312.194-.723.312-1.215.236-.985.529-2.31.857-3.857a796.507 796.507 0 002.231-11.028 2099.253 2099.253 0 002.915-15.15z"
           fill="#A0C0F9"
           stroke="#fff"
-          stroke-width=".8"
+          strokeWidth=".8"
         />
         <mask
           id="b"
@@ -167,10 +167,10 @@ function Explorar() {
             d="M80.017 74.324l.431.137c.565.18 1.395.438 2.457.755 2.125.636 5.177 1.51 8.894 2.464 7.332 1.882 17.253 4.079 27.726 5.372l-6.086 31.564-.075-.013-1.313-.244c-1.131-.211-2.745-.514-4.681-.881-3.87-.736-9.022-1.731-14.148-2.771-5.128-1.04-10.225-2.124-13.989-3.036-1.884-.456-3.424-.867-4.465-1.207-.524-.171-.902-.318-1.132-.436l-.054-.03c.045-.125.09-.276.137-.44.088-.311.193-.722.31-1.213.237-.985.529-2.31.856-3.856.655-3.092 1.453-7.08 2.226-11.023a2089.744 2089.744 0 002.74-14.262l.166-.88z"
             fill="#fff"
             stroke="#fff"
-            stroke-width=".8"
+            strokeWidth=".8"
           />
         </mask>
-        <g mask="url(#b)" fill-rule="evenodd" clip-rule="evenodd">
+        <g mask="url(#b)" fillRule="evenodd" clipRule="evenodd">
           <path
             d="M114.934 105.366a2.66 2.66 0 00-3.038-2.727 4.174 4.174 0 00-4.441-4.604 4.161 4.161 0 00-3.122-2.43 4.182 4.182 0 00-4.859 4.426 2.667 2.667 0 00-3.356 2.126c-.003.017-.003.034-.006.052l18.822 3.157z"
             fill="url(#paint3_linear)"
@@ -200,7 +200,7 @@ function Explorar() {
         <path
           d="M80.033 74.325l.43.138c.565.178 1.395.436 2.457.753 2.123.635 5.174 1.508 8.89 2.46 7.329 1.88 17.246 4.07 27.716 5.359l-6.103 31.58-.074-.014-1.313-.243c-1.13-.21-2.744-.512-4.679-.879a1177.28 1177.28 0 01-14.144-2.764c-5.125-1.037-10.221-2.118-13.983-3.029-1.883-.455-3.423-.866-4.463-1.205-.524-.171-.902-.317-1.132-.436l-.054-.029c.045-.125.09-.277.137-.44.089-.312.194-.723.312-1.215.236-.985.529-2.31.857-3.857a796.507 796.507 0 002.231-11.028 2099.253 2099.253 0 002.915-15.15z"
           stroke="#fff"
-          stroke-width=".8"
+          strokeWidth=".8"
         />
         <mask
           id="c"
@@ -214,10 +214,10 @@ function Explorar() {
             d="M80.033 74.325l.43.138c.565.178 1.395.436 2.457.753 2.123.635 5.174 1.508 8.89 2.46 7.329 1.88 17.246 4.07 27.716 5.359l-6.103 31.58-.074-.014-1.313-.243c-1.13-.21-2.744-.512-4.679-.879a1177.28 1177.28 0 01-14.144-2.764c-5.125-1.037-10.221-2.118-13.983-3.029-1.883-.455-3.423-.866-4.463-1.205-.524-.171-.902-.317-1.132-.436l-.054-.029c.045-.125.09-.277.137-.44.089-.312.194-.723.312-1.215.236-.985.529-2.31.857-3.857a796.507 796.507 0 002.231-11.028 2099.253 2099.253 0 002.915-15.15z"
             fill="#fff"
             stroke="#fff"
-            stroke-width=".8"
+            strokeWidth=".8"
           />
         </mask>
-        <g mask="url(#c)" fill-rule="evenodd" clip-rule="evenodd">
+        <g mask="url(#c)" fillRule="evenodd" clipRule="evenodd">
           <path
             d="M133.902 81.433l-59.03-8.446-10.787 63.957 59.03 8.447 10.787-63.958zm-2.48 1.973l-10.02 59.412-54.836-7.847 10.02-59.412 54.836 7.847z"
             fill="#fff"
@@ -256,8 +256,8 @@ function Explorar() {
             y2="118.725"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#EFF0F2" />
-            <stop offset="1" stop-color="#fff" stop-opacity=".01" />
+            <stop stopColor="#EFF0F2" />
+            <stop offset="1" stopColor="#fff" stopOpacity=".01" />
           </linearGradient>
           <linearGradient
             id="paint1_linear"
@@ -267,8 +267,8 @@ function Explorar() {
             y2="121.725"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#EFF0F2" />
-            <stop offset="1" stop-color="#fff" stop-opacity=".01" />
+            <stop stopColor="#EFF0F2" />
+            <stop offset="1" stopColor="#fff" stopOpacity=".01" />
           </linearGradient>
           <linearGradient
             id="paint2_linear"
@@ -278,8 +278,8 @@ function Explorar() {
             y2="96.529"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#EFF0F2" />
-            <stop offset="1" stop-color="#fff" stop-opacity=".01" />
+            <stop stopColor="#EFF0F2" />
+            <stop offset="1" stopColor="#fff" stopOpacity=".01" />
           </linearGradient>
           <linearGradient
             id="paint3_linear"
@@ -289,8 +289,8 @@ function Explorar() {
             y2="100.695"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A0C0F9" />
-            <stop offset="1" stop-color="#82ABF7" />
+            <stop stopColor="#A0C0F9" />
+            <stop offset="1" stopColor="#82ABF7" />
           </linearGradient>
           <linearGradient
             id="paint4_linear"
@@ -300,8 +300,8 @@ function Explorar() {
             y2="96.751"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A0C0F9" />
-            <stop offset="1" stop-color="#82ABF7" />
+            <stop stopColor="#A0C0F9" />
+            <stop offset="1" stopColor="#82ABF7" />
           </linearGradient>
           <linearGradient
             id="paint5_linear"
@@ -311,8 +311,8 @@ function Explorar() {
             y2="98.692"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A0C0F9" />
-            <stop offset="1" stop-color="#82ABF7" />
+            <stop stopColor="#A0C0F9" />
+            <stop offset="1" stopColor="#82ABF7" />
           </linearGradient>
           <linearGradient
             id="paint6_linear"
@@ -322,8 +322,8 @@ function Explorar() {
             y2="87.528"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#A0C0F9" />
-            <stop offset="1" stop-color="#82ABF7" />
+            <stop stopColor="#A0C0F9" />
+            <stop offset="1" stopColor="#82ABF7" />
           </linearGradient>
           <linearGradient
             id="paint7_linear"
@@ -333,8 +333,8 @@ function Explorar() {
             y2="111.854"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#2884FC" />
-            <stop offset="1" stop-color="#6397F6" />
+            <stop stopColor="#2884FC" />
+            <stop offset="1" stopColor="#6397F6" />
           </linearGradient>
         </defs>
       </svg>
