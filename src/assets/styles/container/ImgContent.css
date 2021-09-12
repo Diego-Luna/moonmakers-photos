@@ -28,3 +28,15 @@
   color: #5f6368;
   font-size: 14px;
 }
+
+.conteiner-photos-content {
+  width: 80%;
+}
+
+.container-data-img {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  align-content: baseline;
+}

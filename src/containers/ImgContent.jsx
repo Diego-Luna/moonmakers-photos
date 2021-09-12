@@ -10,6 +10,8 @@ import NotContentAlbums from "../components/notContetent/Albums";
 import NotContentArchive from "../components/notContetent/Archive";
 import NotContentTrash from "../components/notContetent/Trash";
 
+import AllFotos from "../components/Fotos";
+
 import "../assets/styles/container/ImgContent.css";
 
 function ImgContent() {
@@ -18,12 +20,25 @@ function ImgContent() {
 
   const { stateFotos } = React.useContext(StateContex);
 
-  if (stateFotos.fotos.alldata && stateFotos.fotos.value === true) {
-    return (
-      <div className="center-all conteiner-photos-content">
-        <NotContentFotos />
-      </div>
-    );
+  console.log("_stateFotos_:", stateFotos);
+
+  if (stateFotos.fotos.value === true) {
+    console.log("El boton de fotos es value es true");
+    if (stateFotos.fotos.alldata === []) {
+      console.log("no hay datos de fotos");
+      return (
+        <div className="center-all conteiner-photos-content">
+          <NotContentFotos />
+        </div>
+      );
+    } else {
+      console.log("El foton de fotos hay datos");
+      return (
+        <div className="conteiner-photos-content container-data-img">
+          <AllFotos data={stateFotos.fotos.alldata} />
+        </div>
+      );
+    }
   }
   if (stateFotos.explorar.data && stateFotos.explorar.value === true) {
     return (
@@ -75,7 +90,7 @@ function ImgContent() {
 
   return (
     <div style={{ width: "80%" }}>
-      <p>URL img: {name}</p>
+      <p>URL img: {name}, error</p>
     </div>
   );
 }

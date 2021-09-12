@@ -1,0 +1,17 @@
+.container-img-small {
+  width: calc((100% / 7) - 12px);
+  height: 233px;
+  margin: 3px;
+}
+.container-img-big {
+  width: calc((100% / 4) - 17px);
+  height: 210px;
+  margin: 3px;
+}
+
+.img-all-w {
+  width: 100%;
+}
+.img-all-h {
+  height: 100%;
+}
