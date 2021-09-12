@@ -8,9 +8,7 @@ import Photos from "../containers/photos.jsx";
 import NotFound from "../containers/NotFound.jsx";
 
 function App() {
-
   const { AgregarValores } = React.useContext(StateContex);
-
 
   React.useEffect(() => {
     AgregarValores([
@@ -24,6 +22,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -35,6 +37,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
+        trash: {
+          value: true,
+          data: "2021-10-12",
+        },
       },
       {
         id_user: "1010101",
@@ -46,6 +52,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -57,6 +67,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -68,6 +82,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -79,6 +97,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -90,6 +112,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -101,6 +127,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
+        trash: {
+          value: true,
+          data: "2021-10-12",
+        },
       },
       {
         id_user: "1010101",
@@ -112,6 +142,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -123,6 +157,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -134,6 +172,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -145,6 +187,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -156,6 +202,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -167,6 +217,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -178,6 +232,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
+        trash: {
+          value: true,
+          data: "2021-10-12",
+        },
       },
       {
         id_user: "1010101",
@@ -189,6 +247,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -200,6 +262,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -211,6 +277,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -222,6 +292,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
       {
         id_user: "1010101",
@@ -233,6 +307,10 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
+        trash: {
+          value: true,
+          data: "2021-10-12",
+        },
       },
       {
         id_user: "1010101",
@@ -244,9 +322,13 @@ function App() {
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
+        trash: {
+          value: false,
+          data: "",
+        },
       },
     ]);
-  },[]);
+  }, []);
   return (
     <BrowserRouter>
       <Switch>

@@ -367,10 +367,11 @@ function StateProvider(props) {
   };
 
   const AgregarValores = (alldata) => {
-    const fotosData = alldata.filter((foto) => foto.archive === false);
+    const fotosData = alldata.filter((foto) => (foto.archive === false && foto.trash.value === false ));
 
     const favoritosData = alldata.filter((foto) => foto.favoritos === true);
     const archiveData = alldata.filter((foto) => foto.archive === true);
+    const trashData = alldata.filter((fotos) => fotos.trash.value === true );
 
     setStateFotos({
       fotos: {
@@ -403,7 +404,7 @@ function StateProvider(props) {
       },
       papelera: {
         value: stateFotos.papelera.value,
-        listPapelera: [],
+        listPapelera: trashData,
       },
     });
   };
