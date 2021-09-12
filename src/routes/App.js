@@ -20,6 +20,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
         favoritos: true,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
@@ -30,6 +31,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
@@ -40,6 +42,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
@@ -50,6 +53,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
@@ -60,6 +64,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
@@ -70,6 +75,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
@@ -80,6 +86,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
         favoritos: false,
+        archive: true,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chica"],
@@ -89,8 +96,8 @@ function App() {
         img_id: "08",
         src_img:
           "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-        favoritos: false,
         favoritos: true,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
@@ -101,6 +108,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
@@ -111,6 +119,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
@@ -121,6 +130,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
@@ -131,6 +141,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
@@ -141,6 +152,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
@@ -151,6 +163,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
         favoritos: false,
+        archive: true,
         alt_img: "iimagen de anabelt chase",
         img_formart: "vertical",
         info: ["chico"],
@@ -161,6 +174,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
         favoritos: true,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
@@ -171,6 +185,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
@@ -181,6 +196,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
@@ -191,6 +207,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
@@ -201,6 +218,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
@@ -211,6 +229,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
         favoritos: false,
+        archive: false,
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],
@@ -221,6 +240,7 @@ function App() {
         src_img:
           "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
         favoritos: false,
+        archive: true,
         alt_img: "iimagen de anabelt chase",
         img_formart: "horizontal",
         info: ["chico"],

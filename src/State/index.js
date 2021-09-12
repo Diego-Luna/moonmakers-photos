@@ -367,13 +367,15 @@ function StateProvider(props) {
   };
 
   const AgregarValores = (alldata) => {
+    const fotosData = alldata.filter((foto) => foto.archive === false);
 
     const favoritosData = alldata.filter((foto) => foto.favoritos === true);
+    const archiveData = alldata.filter((foto) => foto.archive === true);
 
     setStateFotos({
       fotos: {
         value: stateFotos.fotos.value,
-        alldata: alldata,
+        alldata: fotosData,
       },
       explorar: {
         value: stateFotos.explorar.value,
@@ -397,7 +399,7 @@ function StateProvider(props) {
       },
       archivo: {
         value: stateFotos.archivo.value,
-        listArchivo: [],
+        listArchivo: archiveData,
       },
       papelera: {
         value: stateFotos.papelera.value,

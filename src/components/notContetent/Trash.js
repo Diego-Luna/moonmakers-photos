@@ -53,7 +53,7 @@ function Trash() {
           <h3 className="container-secction-fotos_h3">No hay elementos</h3>
 
           <p className="container-secction-fotos_p">
-            Aquí solo se muestran los elementos eliminados de google Fotos. Se
+            Aquí solo se muestran los elementos eliminados de MoonMakers Fotos. Se
             retiraran despues de 60 días.
           </p>
         </div>
