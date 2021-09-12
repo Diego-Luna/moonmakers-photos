@@ -16,197 +16,7 @@ function StateProvider(props) {
   const [stateFotos, setStateFotos] = React.useState({
     fotos: {
       value: true,
-      alldata: [
-        {
-          id_user: "1010101",
-          img_id: "01",
-          src_img:
-            "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chica"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "02",
-          src_img:
-            "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chica"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "03",
-          src_img:
-            "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chica"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "04",
-          src_img:
-            "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chica"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "05",
-          src_img:
-            "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chica"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "06",
-          src_img:
-            "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chica"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "07",
-          src_img:
-            "https://i.pinimg.com/564x/b3/55/a2/b355a2a9a7aa64b3daad02d334d27e6e.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chica"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "08",
-          src_img:
-            "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "09",
-          src_img:
-            "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "10",
-          src_img:
-            "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "11",
-          src_img:
-            "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "12",
-          src_img:
-            "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "13",
-          src_img:
-            "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "14",
-          src_img:
-            "https://i.pinimg.com/564x/41/8b/63/418b63bab5df836381063597507e12d0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "vertical",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "15",
-          src_img:
-            "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "horizontal",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "16",
-          src_img:
-            "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "horizontal",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "17",
-          src_img:
-            "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "horizontal",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "18",
-          src_img:
-            "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "horizontal",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "19",
-          src_img:
-            "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "horizontal",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "20",
-          src_img:
-            "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "horizontal",
-          info: ["chico"],
-        },
-        {
-          id_user: "1010101",
-          img_id: "21",
-          src_img:
-            "https://i.pinimg.com/564x/7c/25/4d/7c254dac1db9171339307d64f73133e0.jpg",
-          alt_img: "iimagen de anabelt chase",
-          img_formart: "horizontal",
-          info: ["chico"],
-        },
-      ],
+      alldata: [],
     },
     explorar: {
       value: false,
@@ -556,6 +366,46 @@ function StateProvider(props) {
     });
   };
 
+  const AgregarValores = (alldata) => {
+
+    const favoritosData = alldata.filter((foto) => foto.favoritos === true);
+
+    setStateFotos({
+      fotos: {
+        value: stateFotos.fotos.value,
+        alldata: alldata,
+      },
+      explorar: {
+        value: stateFotos.explorar.value,
+        data: [],
+      },
+      compartido: {
+        value: stateFotos.compartido.value,
+        data: [],
+      },
+      favoritos: {
+        value: stateFotos.favoritos.value,
+        listFavoritos: favoritosData,
+      },
+      albumes: {
+        value: stateFotos.albumes.value,
+        listAlbumes: [],
+      },
+      utilidades: {
+        value: stateFotos.utilidades.value,
+        data: [],
+      },
+      archivo: {
+        value: stateFotos.archivo.value,
+        listArchivo: [],
+      },
+      papelera: {
+        value: stateFotos.papelera.value,
+        listPapelera: [],
+      },
+    });
+  };
+
   return (
     <StateContex.Provider
       value={{
@@ -563,6 +413,7 @@ function StateProvider(props) {
         stateFotos,
         CambiarValorSearch,
         ChangeValueBotonsOnOff,
+        AgregarValores,
       }}
     >
       {props.children}

@@ -54,15 +54,23 @@ function ImgContent() {
       </div>
     );
   }
-  if (
-    stateFotos.favoritos.listFavoritos &&
-    stateFotos.favoritos.value === true
-  ) {
-    return (
-      <div className="center-all conteiner-photos-content">
-        <NotContentFavoritos />
-      </div>
-    );
+  if (stateFotos.favoritos.value === true) {
+    if (!stateFotos.favoritos.listFavoritos) {
+      console.log("no hay datos de favoritos");
+
+      return (
+        <div className="center-all conteiner-photos-content">
+          <NotContentFavoritos />
+        </div>
+      );
+    } else {
+      console.log("El foton de favoritos hay datos");
+      return (
+        <div className="conteiner-photos-content container-data-img">
+          <AllFotos data={stateFotos.favoritos.listFavoritos} />
+        </div>
+      );
+    }
   }
   if (stateFotos.albumes.listAlbumes && stateFotos.albumes.value === true) {
     return (
