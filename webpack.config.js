@@ -1,25 +1,45 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CompressionWebpackPlugin = require("compression-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
+
+require("dotenv").config();
+
+const isDev = process.env.ENV === "development";
+const entry = ["./src/frontend/index.js"];
+
+if (isDev) {
+  entry.push(
+    "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true"
+  );
+}
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/index.js"),
-  mode: "development",
+  entry,
+  mode: process.env.ENV,
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "src/server/public"),
+    filename: isDev ? "assets/app.js" : "assets/app-[hash].js",
+    publicPath: "/",
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: "babel-loader",
-        exclude: /node-modules/,
-      },
-      {
-        test: /\.html$/,
+        exclude: /node_modules/,
         use: {
-          loader: "html-loader",
+          loader: "babel-loader",
         },
       },
       {
@@ -30,7 +50,6 @@ module.exports = {
           },
           "css-loader",
         ],
-
       },
       {
         test: /\.(png|gif|jpg|webp)$/,
@@ -38,7 +57,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "assets/[hash].[ext]",
+              name: "assets/[md5:hash].[ext]",
             },
           },
         ],
@@ -49,11 +68,16 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "public/index.html"),
-    }),
+    isDev ? new webpack.HotModuleReplacementPlugin() : () => {},
+    isDev
+      ? () => {}
+      : new CompressionWebpackPlugin({
+          test: /\.js$|\.css$/,
+          filename: "[path][base].gz",
+        }),
+    isDev ? () => {} : new WebpackManifestPlugin(),
     new MiniCssExtractPlugin({
-      filename: "assets/[name].css",
+      filename: isDev ? "assets/app.css" : "assets/app-[hash].css",
     }),
   ],
 };
