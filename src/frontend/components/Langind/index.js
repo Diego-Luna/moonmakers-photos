@@ -3,11 +3,12 @@ import React from "react";
 import BotomBlue from "../General/Buttons/BotomBlue";
 import "../../assets/styles/components/langind.css";
 
-import ImgPhote from "../../assets/img/devices_mobile.jpg";
+import ImgPhote from "../../assets/img/devicesMobile.jpg";
 import ImgTablet from "../../assets/img/tablet.jpg";
-import ImgSearch from "../../assets/img/img_34.webp";
-import imgCompartir from "../../assets/img/img_38.webp";
-import imgEditar from "../../assets/img/img_40.webp";
+// import ImgSearch from "../../assets/img/imgtest.webp";
+// import ImgSearch from "../../assets/img/img34.webp";
+// import imgCompartir from "../../assets/img/img38.webp";
+// import imgEditar from "../../assets/img/img40.webp";
 
 function LangindUI() {
   return (
@@ -59,11 +60,11 @@ function LangindUI() {
           </p>
           <figure className="img-container-in-three ImgSearch-container">
             {/* imagen de ejemplo de computadora */}
-            <img
+            {/* <img
               className="ImgSearch"
               src={ImgSearch}
               alt="ejemplo de busqueda en las fotos por AI"
-            />
+            /> */}
           </figure>
         </div>
       </section>
@@ -82,11 +83,11 @@ function LangindUI() {
           <p>Comparte fotos y álbumes con amigos y familiares.</p>
 
           <figure className="img-container">
-            <img
+            {/* <img
               className="mg-w-2"
               src={imgCompartir}
               alt="ejemplo de compartir imagenes"
-            />
+            /> */}
           </figure>
         </div>
       </section>
@@ -104,11 +105,11 @@ function LangindUI() {
         </div>
         <figure className="container-secction-big img-container">
           {/* imagen de ejemplo de computadora */}
-          <img
+          {/* <img
             className="mg-w-2"
             src={imgEditar}
             alt="Imagen de ejemplo de editar"
-          />
+          /> */}
         </figure>
       </section>
 
