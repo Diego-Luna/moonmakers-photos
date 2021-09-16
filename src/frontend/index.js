@@ -16,10 +16,9 @@ const history = createBrowserHistory();
 
 // delete window.__PRELOADED_STATE__;
 
-
 // ReactDOM.render(
 ReactDOM.hydrate(
-  <StateProvider>
+    <StateProvider> 
     <Router history={history}>
       <App />
     </Router>

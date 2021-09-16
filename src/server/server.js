@@ -9,7 +9,8 @@ import { renderToString } from "react-dom/server";
 import { renderRoutes } from "react-router-config";
 import { StaticRouter } from "react-router-dom";
 import serverRoutes from "../frontend/routes/serverRoutes";
-import { StateProvider } from "../frontend/State/index";
+import { StateProvider } from "../frontend/state/index";
+
 // import initialState from '../frontend/initialState';
 import getManifest from "./getManifest";
 
