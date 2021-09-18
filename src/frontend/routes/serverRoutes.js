@@ -21,11 +21,15 @@ const routes = [
   },
   {
     exact: true,
+    path: '/photos/',
+    component: Photos,
+  },
+  {
+    exact: true,
     path: '/photos/:name',
     component: Photos,
   },
   {
-    name: 'NotFound',
     component: NotFound,
   },
 ];

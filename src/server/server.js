@@ -28,6 +28,7 @@ if (ENV === "development") {
 
   const { publicPath } = webpackConfig.output;
   const serverConfig = { serverSideRender: true, publicPath };
+  // const serverConfig = { serverSideRender: true };
 
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
@@ -46,6 +47,8 @@ if (ENV === "development") {
 const setResponse = (html, manifest) => {
   const mainStyles = manifest ? manifest["main.css"] : "assets/app.css";
   const mainBuild = manifest ? manifest["main.js"] : "assets/app.js";
+
+  console.log("mainStyles ", mainStyles);
 
   // <script>
   //   window.__PRELOADED_STATE__ = $
@@ -95,6 +98,28 @@ const renderApp = (req, res) => {
   res.send(setResponse(html, req.hashManifest));
   // res.send(setResponse(html, preloadedState, req.hashManifest));
 };
+
+const bucketName = "test-de-uso-genral";
+var destFileName = 'test-react/';
+
+app.post("/photos/upload", async function (req, res, next) {
+  const storage = require("@google-cloud/storage");
+
+  console.log("req :");
+  console.log(req);
+
+  // Creates a client
+  const storage = new Storage();
+  async function uploadFile() {
+    await storage.bucket(bucketName).upload(filePath, {
+      destination: destFileName,
+    });
+
+    console.log(`${filePath} uploaded to ${bucketName}`);
+  }
+
+  // uploadFile().catch(console.error);
+});
 
 app.get("*", renderApp);
 
