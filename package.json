@@ -29,6 +29,7 @@
     "@babel/register": "^7.15.3",
     "@babel/runtime": "7.15.4",
     "asset-require-hook": "^1.2.0",
+    "axios": "^0.21.4",
     "babel-plugin-file-loader": "^2.0.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
