@@ -125,6 +125,17 @@ function LangindUI() {
           <BotomBlue url="/photos/" text="Ir a MoonMakers Fotos" />
         </div>
       </section>
+
+      <form
+        // action="/photos/upload"
+        // action="http://localhost:3000/upload"
+        action="http://localhost:3000/api/photos"
+        method="POST"
+        encType="multipart/form-data"
+      >
+        <input type="file" name="file" />
+        <input type="submit" value="Subir" />
+      </form>
     </React.Fragment>
   );
 }

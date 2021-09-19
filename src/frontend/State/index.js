@@ -1,4 +1,6 @@
 import React, { createContext } from "react/";
+import axios from "axios";
+
 // import React, { createContext } from "react";
 
 const StateContex = createContext();
@@ -7,6 +9,12 @@ const StateContex = createContext();
 function StateProvider(props) {
   // estado de Search
   const [search, setSearch] = React.useState({
+    value: "",
+    cargando: false,
+    error: "",
+  });
+  // estado de input, de imagen
+  const [inputSubir, setInputSubir] = React.useState({
     value: "",
     cargando: false,
     error: "",
@@ -366,12 +374,44 @@ function StateProvider(props) {
     });
   };
 
+  const CambioInputSubir = (value) => {
+    try {
+      setInputSubir({
+        value: value,
+        cargando: true,
+        error: "",
+      });
+
+      var formData = new FormData();
+      var fileField = document.querySelector("input[type='file']");
+
+      formData.append("username", "abc123");
+      formData.append("avatar", fileField.files[0]);
+
+      fetch("http://localhost:3000/api/photos", {
+        method: "POST",
+        body: formData,
+      })
+        .then(() => console.log("funciono"))
+        .catch((error) => console.error("Error:", error));
+    } catch (error) {
+      console.log(error);
+      setInputSubir({
+        value: "",
+        cargando: false,
+        error: "error, al subir la imagen",
+      });
+    }
+  };
+
   const AgregarValores = (alldata) => {
-    const fotosData = alldata.filter((foto) => (foto.archive === false && foto.trash.value === false ));
+    const fotosData = alldata.filter(
+      (foto) => foto.archive === false && foto.trash.value === false
+    );
 
     const favoritosData = alldata.filter((foto) => foto.favoritos === true);
     const archiveData = alldata.filter((foto) => foto.archive === true);
-    const trashData = alldata.filter((fotos) => fotos.trash.value === true );
+    const trashData = alldata.filter((fotos) => fotos.trash.value === true);
 
     setStateFotos({
       fotos: {
@@ -384,7 +424,7 @@ function StateProvider(props) {
       },
       compartido: {
         value: stateFotos.compartido.value,
-        data: [],
+        data: stateFotos.compartido.data,
       },
       favoritos: {
         value: stateFotos.favoritos.value,
@@ -392,7 +432,7 @@ function StateProvider(props) {
       },
       albumes: {
         value: stateFotos.albumes.value,
-        listAlbumes: [],
+        listAlbumes: stateFotos.albumes.listAlbumes,
       },
       utilidades: {
         value: stateFotos.utilidades.value,
@@ -414,9 +454,11 @@ function StateProvider(props) {
       value={{
         search,
         stateFotos,
+        inputSubir,
         CambiarValorSearch,
         ChangeValueBotonsOnOff,
         AgregarValores,
+        CambioInputSubir,
       }}
     >
       {props.children}
