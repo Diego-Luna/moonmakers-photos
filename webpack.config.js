@@ -43,14 +43,14 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          "css-loader",
-        ],
-      },
+          test: /\.css$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+            },
+            "css-loader",
+          ],
+        },
       {
         test: /\.(png|gif|jpg|webp)$/,
         use: [
@@ -81,3 +81,13 @@ module.exports = {
     }),
   ],
 };
+
+// {
+//   test: /\.css$/,
+//   use: [
+//     {
+//       loader: MiniCssExtractPlugin.loader,
+//     },
+//     "css-loader",
+//   ],
+// },

@@ -4,7 +4,7 @@ import React from "react";
 import { StateContex } from "../../state";
 
 import LogoHelp from "../../assets/icons/help.png";
-import LogoUpload from "../../assets/icons/upload.png";
+// import LogoUpload from "../../assets/icons/upload.png";
 import LogoSearch from "../../assets/icons/search.png";
 
 // span
@@ -43,7 +43,7 @@ function Search() {
       <div className="search-container_input">
         <div className="icon-container icon-searh">
           <img src={LogoSearch} alt="logo de busqueda" />
-        </div>{" "}
+        </div>
         <input
           placeholder="Buscar fotos"
           type="text"
@@ -52,8 +52,8 @@ function Search() {
         />
       </div>
       <button className="icon-container">
-        <img src={LogoUpload} alt="Logo de Upload" />
-        <div class="file-select" id="src-file1">
+        {/* <img src={LogoUpload} alt="Logo de Upload" /> */}
+        <div className="file-select" id="src-file1">
           <input onChange={onInputChangeValue} type="file" name="file" />
         </div>
       </button>
