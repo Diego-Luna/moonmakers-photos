@@ -72,6 +72,7 @@ const setResponse = (html, manifest) => {
       </head>
       <body>
         <div id="root">${html}</div>
+        <div id="modal"></div>
 
         <script src="${mainBuild}" type="text/javascript" ></script>
       </body>
@@ -92,7 +93,10 @@ const renderApp = (req, res) => {
     </StateProvider>
   );
 
-  res.set("Content-Security-Policy", "img-src 'self' https://i.pinimg.com/ https://img.icons8.com/");
+  res.set(
+    "Content-Security-Policy",
+    "img-src 'self' https://i.pinimg.com/ https://img.icons8.com/"
+  );
   res.send(setResponse(html, req.hashManifest));
   // res.send(setResponse(html, preloadedState, req.hashManifest));
 };
