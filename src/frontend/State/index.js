@@ -15,10 +15,11 @@ function StateProvider(props) {
   });
   // estado de input, de imagen
   const [inputSubir, setInputSubir] = React.useState({
-    value: "",
     cargando: false,
     error: "",
   });
+
+  const [openModal, setOpenModal] = React.useState(false);
 
   // Estado de los botones del sup menu de photos
   const [stateFotos, setStateFotos] = React.useState({
@@ -375,13 +376,12 @@ function StateProvider(props) {
   };
 
   const CambioInputSubir = (value) => {
+    setOpenModal(true);
+    setInputSubir({
+      cargando: true,
+      error: "",
+    });
     try {
-      setInputSubir({
-        value: value,
-        cargando: true,
-        error: "",
-      });
-
       var formData = new FormData();
       var fileField = document.querySelector("input[type='file']");
 
@@ -392,12 +392,23 @@ function StateProvider(props) {
         method: "POST",
         body: formData,
       })
-        .then(() => console.log("funciono"))
-        .catch((error) => console.error("Error:", error));
+        .then((response) => console.log(response))
+        .then(() =>
+          setInputSubir({
+            cargando: false,
+            error: "",
+          })
+        )
+        .then(() => setOpenModal(false))
+        .catch((error) =>
+          setInputSubir({
+            cargando: false,
+            error: "error, al subir la imagen",
+          })
+        );
     } catch (error) {
       console.log(error);
       setInputSubir({
-        value: "",
         cargando: false,
         error: "error, al subir la imagen",
       });
@@ -455,6 +466,8 @@ function StateProvider(props) {
         search,
         stateFotos,
         inputSubir,
+        openModal,
+        setOpenModal,
         CambiarValorSearch,
         ChangeValueBotonsOnOff,
         AgregarValores,

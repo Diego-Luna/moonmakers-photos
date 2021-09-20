@@ -2,12 +2,13 @@ import React from "react";
 import ImgContent from "./ImgContent.jsx";
 import Menu from "../components/Menu";
 import MenuFotos from "../components/MenuFotos";
+import { Modal } from "../components/Modal";
 
-import { useParams } from 'react-router-dom'
-
+// import { StateContex } from "../";
+import { StateContex } from "../state";
 
 function Photos() {
-  const { name } = useParams();
+  const { openModal } = React.useContext(StateContex);
 
   return (
     <div>
@@ -15,6 +16,11 @@ function Photos() {
       <div className="container-fotos">
         <MenuFotos />
         <ImgContent />
+        {/* cuando openModal sea true, no renderice el componente Modal */}
+        {!!openModal && (
+          <Modal>
+          </Modal>
+        )}
       </div>
     </div>
   );

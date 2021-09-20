@@ -22,20 +22,9 @@ function Search() {
   };
 
   const onInputChangeValue = (event) => {
-    CambioInputSubir(event.target.value);
-
-    // console.log(event);
-    // event.preventDefault();
-    // document.formulario1.submit();
-    // document.formulario1.submit.preventDefault;
-    // event.preventDefault();
-  };
-
-  const onSubmit = (event) => {
-    console.log("event");
-    console.log(event);
-    // cuando apretemos el boton, evita que se recarge la pagina
-    event.preventDefault();
+    if(event.target.value){
+      CambioInputSubir(event.target.value);
+    }
   };
 
   return (
