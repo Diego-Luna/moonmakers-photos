@@ -12,6 +12,8 @@ function StateProvider(props) {
     value: "",
     cargando: false,
     error: "",
+    imgs: [],
+    on: false,
   });
   // estado de input, de imagen
   const [inputSubir, setInputSubir] = React.useState({
@@ -368,11 +370,53 @@ function StateProvider(props) {
   };
 
   const CambiarValorSearch = (value) => {
-    setSearch({
-      value: value,
-      cargando: false,
-      error: "",
-    });
+    if (value != "") {
+      ChangeValueBotonsOnOff("explorar");
+
+      setSearch({
+        value: value,
+        cargando: true,
+        error: "",
+        imgs: search.imgs,
+        on: false,
+      });
+
+      fetch(`http://localhost:3000/api/photos/${value}`, {
+        method: "GET", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          console.log("los datos de la api", response.data);
+          setSearch({
+            value: value,
+            cargando: false,
+            error: "",
+            imgs: response.data,
+            on: false,
+          });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          setSearch({
+            value: value,
+            cargando: false,
+            error: "Error al traer nuestras imagenes",
+            imgs: [],
+            on: false,
+          });
+        });
+    }else{
+      setSearch({
+        value: value,
+        cargando: false,
+        error: "",
+        imgs: [],
+        on: false,
+      });
+    }
   };
 
   const AgregarValores = (alldata) => {
