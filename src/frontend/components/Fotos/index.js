@@ -6,13 +6,15 @@ function index({ data }) {
   return (
     <React.Fragment>
       {data.map((img) => (
-        <div key={img.img_id} className={`${
+        <div key={img.img_id} className="container-img-small">
+          {/* <div key={img.img_id} className={`${
           img.img_formart === "vertical" ? "container-img-small" : "container-img-big "
-        }`}>
+        }`}> */}
           <img
-            className={`${
-              img.img_formart === "vertical" ? "img-all-h" : "img-all-w"
-            }`}
+            className="img-all-h"
+            // className={`${
+            //   img.img_formart === "vertical" ? "img-all-h" : "img-all-w"
+            // }`}
             src={img.src_img}
             alt={img.alt_img}
           />
