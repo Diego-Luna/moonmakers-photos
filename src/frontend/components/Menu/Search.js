@@ -43,7 +43,7 @@ function Search() {
       <button className="icon-container">
         {/* <img src={LogoUpload} alt="Logo de Upload" /> */}
         <div className="file-select" id="src-file1">
-          <input onChange={onInputChangeValue} type="file" name="file" />
+          <input accept="image/png,image/jpeg" onChange={onInputChangeValue} type="file" name="file" />
         </div>
       </button>
       <button className="icon-container">

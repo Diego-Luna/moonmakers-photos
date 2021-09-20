@@ -19,7 +19,7 @@ function StateProvider(props) {
     error: "",
   });
 
-  const [openModal, setOpenModal] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState({ value: false, error: "" });
 
   // Estado de los botones del sup menu de photos
   const [stateFotos, setStateFotos] = React.useState({
@@ -439,7 +439,7 @@ function StateProvider(props) {
   };
 
   const CambioInputSubir = async (value) => {
-    setOpenModal(true);
+    setOpenModal({ value: true, error: "" });
     setInputSubir({
       cargando: true,
       error: "",
@@ -462,18 +462,22 @@ function StateProvider(props) {
             error: "",
           })
         )
-        .then(() => setOpenModal(false))
+        .then(() => setOpenModal({ value: false, error: "" }))
         .then(() => {
           setTimeout(() => {
             llamarApiDatosAll();
           }, 3000);
         })
-        .catch((error) =>
+        .catch((error) => {
           setInputSubir({
             cargando: false,
             error: "error, al subir la imagen",
-          })
-        );
+          });
+          setOpenModal({ value: true, error: "error" });
+          setTimeout(() => {
+            setOpenModal({ value: false, error: "" });
+          }, 1000);
+        });
     } catch (error) {
       console.log(error);
       setInputSubir({

@@ -17,10 +17,7 @@ function Photos() {
         <MenuFotos />
         <ImgContent />
         {/* cuando openModal sea true, no renderice el componente Modal */}
-        {!!openModal && (
-          <Modal>
-          </Modal>
-        )}
+        {!!openModal.value && <Modal Error={openModal.error}></Modal>}
       </div>
     </div>
   );
