@@ -95,7 +95,7 @@ const renderApp = (req, res) => {
 
   res.set(
     "Content-Security-Policy",
-    "img-src 'self' https://i.pinimg.com/ https://img.icons8.com/"
+    "img-src 'self' https://i.pinimg.com/ https://img.icons8.com/ https://storage.googleapis.com"
   );
   res.send(setResponse(html, req.hashManifest));
   // res.send(setResponse(html, preloadedState, req.hashManifest));

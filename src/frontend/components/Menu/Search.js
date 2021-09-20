@@ -22,7 +22,7 @@ function Search() {
   };
 
   const onInputChangeValue = (event) => {
-    if(event.target.value){
+    if (event.target.value) {
       CambioInputSubir(event.target.value);
     }
   };

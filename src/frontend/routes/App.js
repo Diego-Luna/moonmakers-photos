@@ -8,20 +8,21 @@ import Photos from "../containers/photos.jsx";
 import NotFound from "../containers/NotFound.jsx";
 
 function App() {
-  const { AgregarValores } = React.useContext(StateContex);
+  const { AgregarValores, llamarApiDatosAll } = React.useContext(StateContex);
 
   React.useEffect(() => {
-    fetch("http://localhost:3000/api/photos", {
-      method: "GET", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) =>
-        console.log("Success:", AgregarValores(response.data))
-      );
+    llamarApiDatosAll();
+    // fetch("http://localhost:3000/api/photos", {
+    //   method: "GET", // or 'PUT'
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((res) => res.json())
+    //   .catch((error) => console.error("Error:", error))
+    //   .then((response) =>
+    //     console.log("Success:", AgregarValores(response.data))
+    //   );
 
     // AgregarValores([
     //   {

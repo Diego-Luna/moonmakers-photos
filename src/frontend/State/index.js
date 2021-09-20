@@ -375,47 +375,9 @@ function StateProvider(props) {
     });
   };
 
-  const CambioInputSubir = (value) => {
-    setOpenModal(true);
-    setInputSubir({
-      cargando: true,
-      error: "",
-    });
-    try {
-      var formData = new FormData();
-      var fileField = document.querySelector("input[type='file']");
-
-      formData.append("username", "abc123");
-      formData.append("avatar", fileField.files[0]);
-
-      fetch("http://localhost:3000/api/photos", {
-        method: "POST",
-        body: formData,
-      })
-        .then((response) => console.log(response))
-        .then(() =>
-          setInputSubir({
-            cargando: false,
-            error: "",
-          })
-        )
-        .then(() => setOpenModal(false))
-        .catch((error) =>
-          setInputSubir({
-            cargando: false,
-            error: "error, al subir la imagen",
-          })
-        );
-    } catch (error) {
-      console.log(error);
-      setInputSubir({
-        cargando: false,
-        error: "error, al subir la imagen",
-      });
-    }
-  };
-
   const AgregarValores = (alldata) => {
+    console.log("agregar datos");
+
     const fotosData = alldata.filter(
       (foto) => foto.archive === false && foto.trash.value === false
     );
@@ -460,6 +422,67 @@ function StateProvider(props) {
     });
   };
 
+  const llamarApiDatosAll = async () => {
+    console.log("conectando con la api");
+    fetch("http://localhost:3000/api/photos", {
+      method: "GET", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => {
+        console.log("los datos de la api", response.data);
+        AgregarValores(response.data);
+      });
+  };
+
+  const CambioInputSubir = async (value) => {
+    setOpenModal(true);
+    setInputSubir({
+      cargando: true,
+      error: "",
+    });
+    try {
+      var formData = new FormData();
+      var fileField = document.querySelector("input[type='file']");
+
+      formData.append("username", "abc123");
+      formData.append("avatar", fileField.files[0]);
+
+      fetch("http://localhost:3000/api/photos", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => console.log(response))
+        .then(() =>
+          setInputSubir({
+            cargando: false,
+            error: "",
+          })
+        )
+        .then(() => setOpenModal(false))
+        .then(() => {
+          setTimeout(() => {
+            llamarApiDatosAll();
+          }, 3000);
+        })
+        .catch((error) =>
+          setInputSubir({
+            cargando: false,
+            error: "error, al subir la imagen",
+          })
+        );
+    } catch (error) {
+      console.log(error);
+      setInputSubir({
+        cargando: false,
+        error: "error, al subir la imagen",
+      });
+    }
+  };
+
   return (
     <StateContex.Provider
       value={{
@@ -472,6 +495,7 @@ function StateProvider(props) {
         ChangeValueBotonsOnOff,
         AgregarValores,
         CambioInputSubir,
+        llamarApiDatosAll,
       }}
     >
       {props.children}
