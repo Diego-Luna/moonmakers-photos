@@ -11,11 +11,11 @@ import { StateContex } from "../state";
 function About() {
 
 
-  const { search } = React.useContext(StateContex);
+  // const { search } = React.useContext(StateContex);
 
 
-  console.log("search: ");
-  console.log(search);
+  // console.log("search: ");
+  // console.log(search);
 
   return (
     <React.Fragment>

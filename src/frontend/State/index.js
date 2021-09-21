@@ -59,9 +59,12 @@ function StateProvider(props) {
     },
   });
 
+  const [allFotos, setAllFotos] = React.useState([]);
+  // const [state, setState] = React.useState(false);
+
   const ChangeValueBotonsOnOff = (value) => {
     if (value === "fotos" && stateFotos.fotos.value === false) {
-      console.log("en el if de fotos");
+      // console.log("en el if de fotos");
       setStateFotos({
         fotos: {
           value: true,
@@ -99,7 +102,7 @@ function StateProvider(props) {
     }
 
     if (value === "explorar") {
-      console.log("en el if de explorar");
+      // console.log("en el if de explorar");
 
       setStateFotos({
         fotos: {
@@ -137,7 +140,7 @@ function StateProvider(props) {
       });
     }
     if (value === "compartido") {
-      console.log("en el if de compartido");
+      // console.log("en el if de compartido");
 
       setStateFotos({
         fotos: {
@@ -175,7 +178,7 @@ function StateProvider(props) {
       });
     }
     if (value === "favoritos") {
-      console.log("en el if de favoritos");
+      // console.log("en el if de favoritos");
 
       setStateFotos({
         fotos: {
@@ -213,7 +216,7 @@ function StateProvider(props) {
       });
     }
     if (value === "albumes") {
-      console.log("en el if de albumes");
+      // console.log("en el if de albumes");
 
       setStateFotos({
         fotos: {
@@ -251,7 +254,7 @@ function StateProvider(props) {
       });
     }
     if (value === "utilidades") {
-      console.log("en el if de utilidades");
+      // console.log("en el if de utilidades");
 
       setStateFotos({
         fotos: {
@@ -369,18 +372,9 @@ function StateProvider(props) {
     console.log("stateFotos: ", stateFotos);
   };
 
-  const CambiarValorSearch = (value) => {
+  const Datosfiltrados = (value) => {
+    console.log("search.value: ", value);
     if (value != "") {
-      ChangeValueBotonsOnOff("explorar");
-
-      setSearch({
-        value: value,
-        cargando: true,
-        error: "",
-        imgs: search.imgs,
-        on: false,
-      });
-
       fetch(`http://localhost:3000/api/photos/${value}`, {
         method: "GET", // or 'PUT'
         headers: {
@@ -389,12 +383,18 @@ function StateProvider(props) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log("los datos de la api", response.data);
+          console.log("response.data: ", response.data);
+          console.log("response => allFotos : ", allFotos);
+          const filtrados = allFotos.filter((data) =>
+            data.info.includes(response.data)
+          );
+          console.log("filtrados => ", filtrados);
+
           setSearch({
             value: value,
             cargando: false,
             error: "",
-            imgs: response.data,
+            imgs: filtrados,
             on: false,
           });
         })
@@ -408,7 +408,49 @@ function StateProvider(props) {
             on: false,
           });
         });
-    }else{
+    }
+  };
+
+  const CambiarValorSearch = (value) => {
+    if (value != "") {
+      ChangeValueBotonsOnOff("explorar");
+
+      setSearch({
+        value: value,
+        cargando: true,
+        error: "",
+        imgs: search.imgs,
+        on: false,
+      });
+
+      // fetch(`http://localhost:3000/api/photos/${value}`, {
+      //   method: "GET", // or 'PUT'
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      // })
+      //   .then((res) => res.json())
+      //   .then((response) => {
+      //     console.log("los datos de la api", response.data);
+      //     setSearch({
+      //       value: value,
+      //       cargando: false,
+      //       error: "",
+      //       imgs: response.data,
+      //       on: false,
+      //     });
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error:", error);
+      //     setSearch({
+      //       value: value,
+      //       cargando: false,
+      //       error: "Error al traer nuestras imagenes",
+      //       imgs: [],
+      //       on: false,
+      //     });
+      //   });
+    } else {
       setSearch({
         value: value,
         cargando: false,
@@ -421,6 +463,11 @@ function StateProvider(props) {
 
   const AgregarValores = (alldata) => {
     console.log("agregar datos");
+
+    console.log("AgregarValores alldata", alldata);
+
+    setAllFotos(alldata);
+    console.log("AgregarValores => allFotos (state): =>", allFotos);
 
     const fotosData = alldata.filter(
       (foto) => foto.archive === false && foto.trash.value === false
@@ -538,12 +585,15 @@ function StateProvider(props) {
         stateFotos,
         inputSubir,
         openModal,
+        allFotos,
+        setAllFotos,
         setOpenModal,
         CambiarValorSearch,
         ChangeValueBotonsOnOff,
         AgregarValores,
         CambioInputSubir,
         llamarApiDatosAll,
+        Datosfiltrados,
       }}
     >
       {props.children}

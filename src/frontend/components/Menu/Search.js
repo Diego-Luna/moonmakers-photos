@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useCallback } from "react";
+
 import { Redirect } from "react-router-dom";
 
 // importamos neustro contexto
@@ -13,14 +14,31 @@ import "../../assets/styles/components/search.css";
 
 function Search() {
   //  pasamos a nuestro react hook el contexto de nuestra aplicacion: ""
-  const { search, inputSubir, CambioInputSubir, CambiarValorSearch } =
-    React.useContext(StateContex);
+  const {
+    search,
+    inputSubir,
+    CambioInputSubir,
+    CambiarValorSearch,
+    Datosfiltrados,
+  } = React.useContext(StateContex);
 
-  const onSearchValueChange = (event) => {
-    console.log(event.target.value);
+  // const refContainer = useRef(initialValue);
+  const inputEl = useRef(null);
 
-    CambiarValorSearch(event.target.value);
+  const onSearchValueChange = () => {
+    CambiarValorSearch(inputEl.current.value);
+    Datosfiltrados(inputEl.current.value);
   };
+
+  // const onSearchValueChange = useCallback(
+  //   () => {
+  //     console.log(inputEl.current.value);
+  //     CambiarValorSearch(inputEl.current.value);
+  //     Datosfiltrados(inputEl.current.value)
+  //   },
+  //   // le pasamos la referencia al elemento que va a escuchar
+  //   []
+  // );ﬂ
 
   const onInputChangeValue = (event) => {
     if (event.target.value) {
@@ -39,6 +57,7 @@ function Search() {
           type="text"
           value={search.value}
           onChange={onSearchValueChange}
+          ref={inputEl}
         />
       </div>
       <button className="icon-container">

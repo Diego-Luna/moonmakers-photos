@@ -18,11 +18,11 @@ import "../assets/styles/container/ImgContent.css";
 function ImgContent() {
   const { name } = useParams();
 
-  const { stateFotos, search } = React.useContext(StateContex);
+  const { stateFotos, search, allFotos } = React.useContext(StateContex);
 
   // console.log("_stateFotos_:", stateFotos);
-
-  console.log("search.imgs: ", search.imgs);
+  // console.log("allFotos", allFotos);
+  // console.log("search.imgs: ", search.imgs);
 
   if (stateFotos.fotos.value === true) {
     if (stateFotos.fotos.alldata.length === 0) {
@@ -41,18 +41,16 @@ function ImgContent() {
   }
   if (stateFotos.explorar.value === true) {
     if (search.imgs.length === 0) {
-      console.log("no hay datos");
-
       return (
         <div className="center-all conteiner-photos-content">
-        {/* <div className="conteiner-photos-content"> */}
+          {/* <div className="conteiner-photos-content"> */}
           <NotContentSearch />
         </div>
       );
     } else {
       return (
         <div className="center-all conteiner-photos-content">
-        {/* <div className="conteiner-photos-content"> */}
+          {/* <div className="conteiner-photos-content"> */}
           <LandingSearch>
             <div className="conteiner-photos-content container-data-img">
               <AllFotos data={search.imgs} />
