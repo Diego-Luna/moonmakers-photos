@@ -476,6 +476,20 @@ function StateProvider(props) {
     const favoritosData = alldata.filter((foto) => foto.favoritos === true);
     const archiveData = alldata.filter((foto) => foto.archive === true);
     const trashData = alldata.filter((fotos) => fotos.trash.value === true);
+    const duplicatePhotosData = alldata.filter(
+      (fotos) => fotos.repet.val === true
+    );
+
+    duplicatePhotosData.sort(function (a, b) {
+      if (a.repet.repet_imgs[0] > b.repet.repet_imgs[0]) {
+        return 1;
+      }
+      if (a.repet.repet_imgs[0] < b.repet.repet_imgs[0]) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    });
 
     setStateFotos({
       fotos: {
@@ -500,7 +514,7 @@ function StateProvider(props) {
       },
       utilidades: {
         value: stateFotos.utilidades.value,
-        data: [],
+        data: duplicatePhotosData,
       },
       archivo: {
         value: stateFotos.archivo.value,

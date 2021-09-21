@@ -9,6 +9,7 @@ import NotContentFavoritos from "../components/notContetent/Favoritos";
 import NotContentAlbums from "../components/notContetent/Albums";
 import NotContentArchive from "../components/notContetent/Archive";
 import NotContentTrash from "../components/notContetent/Trash";
+import NotContentUtils from "../components/notContetent/Utils";
 
 import AllFotos from "../components/Fotos";
 import LandingSearch from "../components/LandingSearch";
@@ -51,7 +52,7 @@ function ImgContent() {
       return (
         <div className="center-all conteiner-photos-content">
           {/* <div className="conteiner-photos-content"> */}
-          <LandingSearch>
+          <LandingSearch text={"Explorar"}>
             <div className="conteiner-photos-content container-data-img">
               <AllFotos data={search.imgs} />
             </div>
@@ -67,6 +68,28 @@ function ImgContent() {
       </div>
     );
   }
+
+  if (stateFotos.utilidades.value === true) {
+    if (stateFotos.utilidades.data.length === 0) {
+      return (
+        <div className="center-all conteiner-photos-content">
+          {/* <NotContentArchive /> */}
+          <NotContentUtils />
+        </div>
+      );
+    } else {
+      return (
+        <div className="center-all conteiner-photos-content">
+          <LandingSearch text={"Clean"}>
+            <div className="conteiner-photos-content container-data-img">
+              <AllFotos data={stateFotos.utilidades.data} />
+            </div>
+          </LandingSearch>
+        </div>
+      );
+    }
+  }
+
   if (stateFotos.favoritos.value === true) {
     if (stateFotos.favoritos.listFavoritos.length === 0) {
       return (
