@@ -599,10 +599,24 @@ function StateProvider(props) {
     });
     try {
       var formData = new FormData();
-      var fileField = document.querySelector("input[type='file']");
+      // var fileField = document.querySelector("input[type='file']");
+
+      console.log("formData => ");
+      console.log(formData);
 
       formData.append("username", "abc123");
-      formData.append("avatar", fileField.files[0]);
+
+      console.log("formData =>  username =>");
+      console.log(formData);
+
+      // formData.append("avatar", fileField.files[0]);
+      formData.append("avatar", value.files[0]);
+
+      // console.log(" fileField.files[0] =>");
+      // console.log(fileField.files[0]);
+
+      console.log("CambioInputSubir => value =>  ");
+      console.log(value.files);
 
       fetch("http://localhost:3000/api/photos", {
         method: "POST",

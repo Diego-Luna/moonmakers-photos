@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from "react";
+import React, { useRef } from "react";
 
 import { Redirect } from "react-router-dom";
 
@@ -24,26 +24,22 @@ function Search() {
 
   // const refContainer = useRef(initialValue);
   const inputEl = useRef(null);
+  const inputURL = useRef(null);
 
   const onSearchValueChange = () => {
     CambiarValorSearch(inputEl.current.value);
     Datosfiltrados(inputEl.current.value);
   };
 
-  // const onSearchValueChange = useCallback(
-  //   () => {
-  //     console.log(inputEl.current.value);
-  //     CambiarValorSearch(inputEl.current.value);
-  //     Datosfiltrados(inputEl.current.value)
-  //   },
-  //   // le pasamos la referencia al elemento que va a escuchar
-  //   []
-  // );ﬂ
-
-  const onInputChangeValue = (event) => {
-    if (event.target.value) {
-      CambioInputSubir(event.target.value);
-    }
+  // const onInputChangeValue = (event) => {
+  //   if (event.target.value) {
+  //     CambioInputSubir(event.target);
+  //   }
+  // };
+  const onInputChangeValue = () => {
+    // console.log("inputURL.current =>");
+    // console.log(inputURL.current);
+    CambioInputSubir(inputURL.current);
   };
 
   return (
@@ -63,11 +59,18 @@ function Search() {
       <button className="icon-container">
         {/* <img src={LogoUpload} alt="Logo de Upload" /> */}
         <div className="file-select" id="src-file1">
-          <input
+          {/* <input
             accept="image/png,image/jpeg"
             onChange={onInputChangeValue}
             type="file"
             name="file"
+          /> */}
+          <input
+            accept="image/png,image/jpeg"
+            type="file"
+            name="file"
+            onChange={onInputChangeValue}
+            ref={inputURL}
           />
         </div>
       </button>
