@@ -4,7 +4,7 @@ function Archive() {
   return (
     <div className="container-secction-fotos">
       <div className="fotos-suptitle-container">
-        <h2 className="fotos-suptitle">Clean</h2>
+        <h2 className="fotos-suptitle">Clean with AI</h2>
       </div>
       <div className="center-all">
         <div>

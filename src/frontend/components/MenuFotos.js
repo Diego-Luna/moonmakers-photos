@@ -70,7 +70,7 @@ function MenuFotos() {
         varState={stateFotos.utilidades.value}
         stateReference={"utilidades"}
         // text="Utilidades"
-        text="Clean"
+        text="Clean with AI"
       >
         <svg
           width="24px"

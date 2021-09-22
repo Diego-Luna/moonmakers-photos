@@ -5,9 +5,8 @@ import "../../assets/styles/components/langind.css";
 
 import ImgPhote from "../../assets/img/devicesMobile.jpg";
 import ImgTablet from "../../assets/img/tablet.jpg";
-// import ImgSearch from "../../assets/img/imgtest.webp";
-// import ImgSearch from "../../assets/img/img34.webp";
-// import imgCompartir from "../../assets/img/img38.webp";
+import ImgSearch from "../../assets/img/search.png";
+import imgCompartir from "../../assets/img/comparte.png";
 // import imgEditar from "../../assets/img/img40.webp";
 
 function LangindUI() {
@@ -60,18 +59,18 @@ function LangindUI() {
           </p>
           <figure className="img-container-in-three ImgSearch-container">
             {/* imagen de ejemplo de computadora */}
-            {/* <img
+            <img
               className="ImgSearch"
               src={ImgSearch}
               alt="ejemplo de busqueda en las fotos por AI"
-            /> */}
+            />
           </figure>
         </div>
       </section>
 
       {/* Guarda y comparte fácilmente lo que realmente te importa */}
       <section className="secction container">
-        <div>
+        <div className="text-center">
           <figure className="img-container">
             {/* logo de compartir en familia */}
           </figure>
@@ -82,12 +81,12 @@ function LangindUI() {
 
           <p>Comparte fotos y álbumes con amigos y familiares.</p>
 
-          <figure className="img-container">
-            {/* <img
-              className="mg-w-2"
+          <figure className="img-container img-container-in-three img-container-big">
+            <img
+              className="img-clasic"
               src={imgCompartir}
               alt="ejemplo de compartir imagenes"
-            /> */}
+            />
           </figure>
         </div>
       </section>
@@ -125,17 +124,6 @@ function LangindUI() {
           <BotomBlue url="/photos/" text="Ir a MoonMakers Fotos" />
         </div>
       </section>
-
-      <form
-        // action="/photos/upload"
-        // action="http://localhost:3000/upload"
-        action="http://localhost:3000/api/photos"
-        method="POST"
-        encType="multipart/form-data"
-      >
-        <input type="file" name="file" />
-        <input type="submit" value="Subir" />
-      </form>
     </React.Fragment>
   );
 }
