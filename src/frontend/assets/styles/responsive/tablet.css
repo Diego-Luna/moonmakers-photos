@@ -1,0 +1,55 @@
+@media (max-width: 780px) {
+  .search-container {
+    width: 20%;
+  }
+  .logo--container {
+    margin: 0;
+  }
+  nav {
+    justify-content: space-around;
+  }
+  h2 {
+    font-size: 130%;
+  }
+
+  .secction p {
+    font-size: 90%;
+  }
+
+  .svg,
+  .secction svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .intro-fondo-center .BotomBlue {
+    height: 130%;
+  }
+  .img-container-samll,
+  .img-container {
+    height: auto;
+  }
+
+  .display-flex-colum_tablet {
+    flex-direction: column;
+    height: auto;
+  }
+  .secction {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: 60vh;
+  }
+  .container-recuerdos{
+    height: auto;
+  }
+
+  .ImgSearch {
+    width: auto;
+    height: 100%;
+  }
+
+  .intro {
+    height: 80vh;
+    margin: 0;
+  }
+}

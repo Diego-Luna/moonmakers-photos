@@ -40,8 +40,37 @@ function LangindUI() {
         </div>
       </section>
 
+      {/* Edita tus recuerdos para darles vida */}
+      <section className="secction container display-flex-colum_tablet ">
+        <div data-aos="fade-right" className="container-secction-small">
+          <img
+            src="https://www.google.com/photos/static/2020/images/index/icon_editing.svg"
+            alt=""
+          />
+          <h2>
+            Cuida tus <br /> recuerdos con <br /> Clean AI
+          </h2>
+          <p>
+            Usa la inteligencia artificial, para cuidar tus recuerdos y
+            almacenamiento. Usando Clean AI, lograrás saber que fotos están
+            duplicadas y tu decides cual conservar deseas conservar.
+          </p>
+        </div>
+        <figure
+          data-aos="fade-left"
+          className="container-secction-big img-container"
+        >
+          {/* imagen de ejemplo de computadora */}
+          <img
+            className="img-w-1"
+            src={imgClean}
+            alt="Imagen de ejemplo de editar"
+          />
+        </figure>
+      </section>
+
       {/* tus recuerdos en toos los dispositivos */}
-      <section className="secction container ">
+      <section className="secction container display-flex-colum_tablet">
         <div data-aos="fade-right" className="container-secction-small">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +136,7 @@ function LangindUI() {
       </section>
 
       {/* Encuentra fotos mas rapido */}
-      <section className="secction container">
+      <section className="secction container container-recuerdos">
         <div data-aos="zoom-out" className="text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -115,6 +144,7 @@ function LangindUI() {
             height="56px"
             viewBox="0 0 55 56"
             version="1.1"
+            className="svg"
           >
             <g
               id="Page-1"
@@ -271,35 +301,6 @@ function LangindUI() {
             />
           </figure>
         </div>
-      </section>
-
-      {/* Edita tus recuerdos para darles vida */}
-      <section className="secction container">
-        <div data-aos="fade-right" className="container-secction-small">
-          <img
-            src="https://www.google.com/photos/static/2020/images/index/icon_editing.svg"
-            alt=""
-          />
-          <h2>
-            Cuida tus <br /> recuerdos con <br /> Clean AI
-          </h2>
-          <p>
-            Usa la inteligencia artificial, para cuidar tus recuerdos y
-            almacenamiento. Usando Clean AI, lograrás saber que fotos están
-            duplicadas y tu decides cual conservar deseas conservar.
-          </p>
-        </div>
-        <figure
-          data-aos="fade-left"
-          className="container-secction-big img-container"
-        >
-          {/* imagen de ejemplo de computadora */}
-          <img
-            className="img-w-1"
-            src={imgClean}
-            alt="Imagen de ejemplo de editar"
-          />
-        </figure>
       </section>
 
       {/* Saca el máximo partido de tus recuerdos con Google Fotos */}

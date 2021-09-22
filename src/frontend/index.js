@@ -8,10 +8,10 @@ import { createBrowserHistory } from "history";
 // importamos nuestro provider, (el estado de nuestra web app)
 import { StateProvider } from "./state/index";
 
-import "animate.css"
+import "animate.css";
 import "./assets/styles/style.css";
+import "./assets/styles/responsive/tablet.css";
 import "aos/dist/aos.css";
-
 
 const history = createBrowserHistory();
 
@@ -21,7 +21,7 @@ const history = createBrowserHistory();
 
 // ReactDOM.render(
 ReactDOM.hydrate(
-    <StateProvider> 
+  <StateProvider>
     <Router history={history}>
       <App />
     </Router>
