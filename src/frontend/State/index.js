@@ -292,7 +292,7 @@ function StateProvider(props) {
       });
     }
     if (value === "archivo") {
-      console.log("en el if de archivo");
+      // console.log("en el if de archivo");
 
       setStateFotos({
         fotos: {
@@ -330,7 +330,7 @@ function StateProvider(props) {
       });
     }
     if (value === "papelera") {
-      console.log("en el if de papelera");
+      // console.log("en el if de papelera");
 
       setStateFotos({
         fotos: {
@@ -368,8 +368,8 @@ function StateProvider(props) {
       });
     }
 
-    console.log("value :", value);
-    console.log("stateFotos: ", stateFotos);
+    // console.log("value :", value);
+    // console.log("stateFotos: ", stateFotos);
   };
 
   const ToTrahsOrDelate = (value) => {
@@ -421,7 +421,7 @@ function StateProvider(props) {
   };
 
   const Datosfiltrados = (value) => {
-    console.log("search.value: ", value);
+    // console.log("search.value: ", value);
     if (value != "") {
       fetch(`http://localhost:3000/api/photos/${value}`, {
         method: "GET", // or 'PUT'
@@ -431,12 +431,12 @@ function StateProvider(props) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log("response.data: ", response.data);
-          console.log("response => allFotos : ", allFotos);
+          // console.log("response.data: ", response.data);
+          // console.log("response => allFotos : ", allFotos);
           const filtrados = allFotos.filter((data) =>
             data.info.includes(response.data)
           );
-          console.log("filtrados => ", filtrados);
+          // console.log("filtrados => ", filtrados);
 
           setSearch({
             value: value,
@@ -525,7 +525,7 @@ function StateProvider(props) {
     const archiveData = alldata.filter((foto) => foto.archive === true);
     const trashData = alldata.filter((fotos) => fotos.trash.value === true);
     const duplicatePhotosData = alldata.filter(
-      (fotos) => fotos.repet.val === true
+      (fotos) => fotos.repet.val === true && fotos.trash.value === false
     );
 
     duplicatePhotosData.sort(function (a, b) {
@@ -586,7 +586,7 @@ function StateProvider(props) {
       .then((res) => res.json())
       .catch((error) => console.error("Error:", error))
       .then((response) => {
-        console.log("los datos de la api", response.data);
+        // console.log("los datos de la api", response.data);
         AgregarValores(response.data);
       });
   };
@@ -608,19 +608,37 @@ function StateProvider(props) {
         method: "POST",
         body: formData,
       })
-        .then((response) => console.log(response))
-        .then(() =>
-          setInputSubir({
-            cargando: false,
-            error: "",
-          })
-        )
-        .then(() => setOpenModal({ value: false, error: "" }))
-        .then(() => {
-          setTimeout(() => {
-            llamarApiDatosAll();
-          }, 3000);
+        .then((res) => res.json())
+        .then((response) => {
+          // console.log("response => ", response);
+
+          if (response.message === "File upload") {
+            setInputSubir({
+              cargando: false,
+              error: "",
+            });
+            setOpenModal({ value: false, error: "" });
+            setTimeout(() => {
+              llamarApiDatosAll();
+            }, 2000);
+            // }, 3000);
+          } else {
+            setInputSubir({
+              cargando: false,
+              error: "error, al subir la imagen",
+            });
+            setOpenModal({ value: true, error: "error" });
+            setTimeout(() => {
+              setOpenModal({ value: false, error: "" });
+            }, 1000);
+          }
         })
+        // .then(() => setOpenModal({ value: false, error: "" }))
+        // .then(() => {
+        //   // setTimeout(() => {
+        //   //   llamarApiDatosAll();
+        //   // }, 3000);
+        // })
         .catch((error) => {
           setInputSubir({
             cargando: false,
