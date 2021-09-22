@@ -27,6 +27,7 @@ h1 {
   font-weight: 400;
 }
 
+.img-container-samll,
 .img-container {
   height: 100%;
   width: 100%;
@@ -34,16 +35,28 @@ h1 {
   object-fit: cover;
   margin: 0;
 }
+.img-container-samll {
+  width: 35%;
+  margin-left: calc((100% - 35%) / 2);
+}
+.img-container-samll img {
+  width: 100%;
+}
 
 .img-h-2 {
   width: 30%;
   object-fit: contain;
 }
 
+.img-w-1,
 .img-w-2 {
   height: auto;
   width: 70%;
   object-fit: contain;
+}
+
+.img-w-1 {
+  width: 100%;
 }
 
 .ImgSearch-container {

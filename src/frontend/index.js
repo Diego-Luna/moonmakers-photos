@@ -8,7 +8,10 @@ import { createBrowserHistory } from "history";
 // importamos nuestro provider, (el estado de nuestra web app)
 import { StateProvider } from "./state/index";
 
+import "animate.css"
 import "./assets/styles/style.css";
+import "aos/dist/aos.css";
+
 
 const history = createBrowserHistory();
 

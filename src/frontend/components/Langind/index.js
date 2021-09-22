@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
 import BotomBlue from "../General/Buttons/BotomBlue";
 import "../../assets/styles/components/langind.css";
 
-import ImgPhote from "../../assets/img/devicesMobile.jpg";
+import ImgPhote from "../../assets/img/devicesMobile.png";
 import ImgTablet from "../../assets/img/tablet.jpg";
 import ImgSearch from "../../assets/img/search.png";
 import imgCompartir from "../../assets/img/comparte.png";
-// import imgEditar from "../../assets/img/img40.webp";
+import imgClean from "../../assets/img/clean.png";
+
+import LogoMoonMakers from "../../assets/img/MoonMakers.png";
 
 function LangindUI() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <React.Fragment>
       {/* intro a about */}
       <section className="secction intro ">
-        <div>
+        {/* <section className="animate__animated animate__bounceInDown secction intro "> */}
+        <div data-aos="zoom-in">
           <h1>
             El hogar de tus <br /> recuerdos
           </h1>
@@ -24,10 +34,9 @@ function LangindUI() {
 
       {/* tus recuerdos en toos los dispositivos */}
       <section className="secction container ">
-        <div className="container-secction-small">
+        <div data-aos="fade-right" className="container-secction-small">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            // xmlns:xlink="http://www.w3.org/1999/xlink="
             width="70"
             height="45"
             viewBox="0 0 70 45"
@@ -71,7 +80,10 @@ function LangindUI() {
             disfruta de ellos en cualquier dispositivo
           </p>
         </div>
-        <figure className="container-secction-big img-container">
+        <figure
+          data-aos="fade-left"
+          className="container-secction-big img-container"
+        >
           {/* imagen de telefonos a computadoras */}
           <img
             className="img-h-2"
@@ -88,7 +100,7 @@ function LangindUI() {
 
       {/* Encuentra fotos mas rapido */}
       <section className="secction container">
-        <div className="text-center">
+        <div data-aos="zoom-out" className="text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="55px"
@@ -154,7 +166,10 @@ function LangindUI() {
             Tus fotos se organizan automaticamente y están <br /> disponibles
             para busquedas para que las encuentres <br /> facilmente
           </p>
-          <figure className="img-container-in-three ImgSearch-container">
+          <figure
+            data-aos="zoom-in-up"
+            className="img-container-in-three ImgSearch-container"
+          >
             {/* imagen de ejemplo de computadora */}
             <img
               className="ImgSearch"
@@ -167,7 +182,11 @@ function LangindUI() {
 
       {/* Guarda y comparte fácilmente lo que realmente te importa */}
       <section className="secction container">
-        <div className="text-center">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="text-center"
+        >
           {/* <figure className="img-container"> */}
           {/* logo de compartir en familia */}
           {/* </figure> */}
@@ -230,7 +249,12 @@ function LangindUI() {
 
           <p>Comparte fotos y álbumes con amigos y familiares.</p>
 
-          <figure className="img-container img-container-in-three img-container-big">
+          <figure
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            className="img-container img-container-in-three img-container-big"
+          >
             <img
               className="img-clasic"
               src={imgCompartir}
@@ -242,7 +266,7 @@ function LangindUI() {
 
       {/* Edita tus recuerdos para darles vida */}
       <section className="secction container">
-        <div className="container-secction-small">
+        <div data-aos="fade-right" className="container-secction-small">
           <img
             src="https://www.google.com/photos/static/2020/images/index/icon_editing.svg"
             alt=""
@@ -255,21 +279,25 @@ function LangindUI() {
             edición y los filtros inteligentes
           </p>
         </div>
-        <figure className="container-secction-big img-container">
+        <figure
+          data-aos="fade-left"
+          className="container-secction-big img-container"
+        >
           {/* imagen de ejemplo de computadora */}
-          {/* <img
-            className="mg-w-2"
-            src={imgEditar}
+          <img
+            className="img-w-1"
+            src={imgClean}
             alt="Imagen de ejemplo de editar"
-          /> */}
+          />
         </figure>
       </section>
 
       {/* Saca el máximo partido de tus recuerdos con Google Fotos */}
       <section className="secction container">
-        <div className="text-center">
-          <figure className="img-container">
+        <div data-aos="zoom-in-up" className="text-center">
+          <figure className="img-container-samll">
             {/* Logo de MoonMakers Photos */}
+            <img src={LogoMoonMakers} alt="Logo de MoonMakers Fotos" />
           </figure>
           <h2>
             Saca el máximo partido de tus recuerdos <br /> con Google Fotos
