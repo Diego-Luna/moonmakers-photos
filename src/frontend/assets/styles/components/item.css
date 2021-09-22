@@ -18,3 +18,46 @@
 .img-all-h {
   height: 100%;
 }
+
+.img_container_botos {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgb(141 141 141 / 25%);
+  text-align: right;
+}
+
+.img_container {
+  position: relative;
+}
+
+.img_container_botos-buton {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  background: black;
+  box-shadow: none;
+  border: none;
+  border-radius: 50%;
+  margin: 5px;
+}
+.img_container_botos-buton img {
+  height: 100%;
+}
+.img_container:hover {
+  opacity: 0.8;
+}
+.img_container:hover > .img_container_botos {
+  opacity: 1;
+}
+.img_container_botos-buton:hover {
+  background-color: var(--color-gray_three);
+}
+.img_container_botos-buton:hover svg {
+  fill: black;
+}
+/* .img_container:hover > .img_container_botos-buton {
+} */

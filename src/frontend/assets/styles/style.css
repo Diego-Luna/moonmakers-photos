@@ -47,6 +47,13 @@ h2 {
   display: flex;
 }
 
+.svg-white {
+  fill: white;
+}
+
+.svg-black {
+  fill: black;
+}
 .svg-blue {
   fill: var(--color-blue-light);
 }
@@ -62,7 +69,6 @@ h2 {
   justify-content: center;
   text-align: center;
 }
-
 
 .height-vh {
   height: 100vh;
