@@ -372,6 +372,43 @@ function StateProvider(props) {
     console.log("stateFotos: ", stateFotos);
   };
 
+  const ToTrahsOrDelate = (value) => {
+    console.log(" in ToTrahsOrDelate ", value);
+    const elemento = allFotos.find((element) => element.img_id === value);
+
+    console.log("elemento encontrado: ", elemento);
+
+    if (elemento.trash.value === false) {
+      console.log(" in el if to fetch");
+
+      fetch(`http://localhost:3000/api/photos/${value}`, {
+        method: "PUT", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then(() => {
+          llamarApiDatosAll();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    } else if (elemento.trash.value === true) {
+      fetch(`http://localhost:3000/api/photos/${value}`, {
+        method: "PUT", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then(() => {
+          llamarApiDatosAll();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+  };
+
   const Datosfiltrados = (value) => {
     console.log("search.value: ", value);
     if (value != "") {
@@ -608,6 +645,7 @@ function StateProvider(props) {
         CambioInputSubir,
         llamarApiDatosAll,
         Datosfiltrados,
+        ToTrahsOrDelate,
       }}
     >
       {props.children}
