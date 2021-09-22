@@ -80,7 +80,7 @@ function ImgContent() {
     } else {
       return (
         <div className="center-all conteiner-photos-content">
-          <LandingSearch text={"Clean with AI"}>
+          <LandingSearch text={"Clean AI"}>
             <div className="conteiner-photos-content container-data-img">
               <AllFotos data={stateFotos.utilidades.data} />
             </div>
