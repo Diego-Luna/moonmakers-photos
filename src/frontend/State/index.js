@@ -379,7 +379,15 @@ function StateProvider(props) {
     console.log("elemento encontrado: ", elemento);
 
     if (elemento.trash.value === false) {
-      console.log(" in el if to fetch");
+      console.log(" in el if to fetch a put");
+
+      const indexAllFotos = allFotos.findIndex(
+        (element) => element.img_id === value
+      );
+
+      allFotos[indexAllFotos].trash.value = true;
+
+      AgregarValores(allFotos);
 
       fetch(`http://localhost:3000/api/photos/${value}`, {
         method: "PUT", // or 'PUT'
@@ -388,14 +396,17 @@ function StateProvider(props) {
         },
       })
         .then(() => {
-          llamarApiDatosAll();
+          // llamarApiDatosAll();
+          console.log("listo -actualisado en backend");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
     } else if (elemento.trash.value === true) {
+      console.log(" in el if to fetch a delete");
+
       fetch(`http://localhost:3000/api/photos/${value}`, {
-        method: "PUT", // or 'PUT'
+        method: "DELETE", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
         },
