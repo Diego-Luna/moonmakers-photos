@@ -44,8 +44,9 @@ h1 {
 }
 
 .img-h-2 {
-  width: 30%;
+  width: calc(30% - 10px);
   object-fit: contain;
+  padding-right: 10px;
 }
 
 .img-w-1,

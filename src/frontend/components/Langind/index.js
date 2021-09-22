@@ -5,17 +5,20 @@ import BotomBlue from "../General/Buttons/BotomBlue";
 import "../../assets/styles/components/langind.css";
 
 import ImgPhote from "../../assets/img/devicesMobile.png";
-import ImgTablet from "../../assets/img/tablet.jpg";
+import ImgTablet from "../../assets/img/tablet.png";
 import ImgSearch from "../../assets/img/search.png";
 import imgCompartir from "../../assets/img/comparte.png";
 import imgClean from "../../assets/img/clean.png";
 
 import LogoMoonMakers from "../../assets/img/MoonMakers.png";
 
+// import imagIntro from "../../assets/img/Inicio-3.gif";
+
 function LangindUI() {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      // duration: 2000,
+      duration: 1500,
     });
   }, []);
 
@@ -24,6 +27,13 @@ function LangindUI() {
       {/* intro a about */}
       <section className="secction intro ">
         {/* <section className="animate__animated animate__bounceInDown secction intro "> */}
+        {/* imagen de ejemplo de computadora */}
+        {/* <img
+          className="ImgSearch"
+          style={{ width: "500px" }}
+          src={imagIntro}
+          alt="ejemplo de busqueda en las fotos por AI"
+        /> */}
         <div data-aos="zoom-in">
           <h1>
             El hogar de tus <br /> recuerdos
@@ -183,8 +193,9 @@ function LangindUI() {
       {/* Guarda y comparte fácilmente lo que realmente te importa */}
       <section className="secction container">
         <div
-          data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
           className="text-center"
         >
           {/* <figure className="img-container"> */}
@@ -250,8 +261,8 @@ function LangindUI() {
           <p>Comparte fotos y álbumes con amigos y familiares.</p>
 
           <figure
-            data-aos="fade-down"
-            data-aos-easing="linear"
+            data-aos="fade-up"
+            // data-aos-duration="3000"
             data-aos-duration="1500"
             className="img-container img-container-in-three img-container-big"
           >
