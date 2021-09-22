@@ -18,8 +18,10 @@ nav {
 
 a img {
   width: 100%;
+  max-width: 300px;
 }
 
+.search-container-fotos,
 .search-container {
   width: 63.5%;
   height: 100%;
@@ -27,6 +29,7 @@ a img {
   display: flex;
   align-items: center;
 }
+.search-container-fotos img,
 .search-container img {
   width: 100%;
 }

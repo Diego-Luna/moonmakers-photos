@@ -43,7 +43,7 @@ function Search() {
   };
 
   return (
-    <div className="search-container">
+    <div className="search-container-fotos">
       <div className="search-container_input">
         <div className="icon-container icon-searh">
           <img src={LogoSearch} alt="logo de busqueda" />

@@ -19,7 +19,7 @@ function Menu({ enPhotos }) {
   };
 
   return (
-    <nav>
+    <nav className={`${enPhotos ? "nav-fotos" : "nav"}`}>
       {/* seccion del logo */}
       <Link className="logo--container" to={() => URLLogo()}>
         <img src={MoonMakerPhotos} alt="Logo de MoonMakers photos" />
