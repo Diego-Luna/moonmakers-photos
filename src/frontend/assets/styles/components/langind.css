@@ -1,7 +1,6 @@
 .secction {
   width: 100vw;
   height: 100vh;
-  border-bottom: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,4 +74,22 @@ h1 {
 }
 .img-container-big {
   width: 75vw;
+}
+
+.intro-fondo-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.intro-fondo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img.cover {
+  object-fit: cover;
+}
+
+.intro-fondo-center {
+  position: absolute;
 }

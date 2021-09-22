@@ -13,6 +13,7 @@ nav {
 }
 .logo--container {
   width: 20%;
+  margin-left: 25px;
 }
 
 a img {
@@ -20,7 +21,7 @@ a img {
 }
 
 .search-container {
-  width: 65%;
+  width: 63.5%;
   height: 100%;
 
   display: flex;
@@ -61,8 +62,8 @@ a img {
   align-items: center;
 }
 
-.icon-container:hover{
-background-color: var(--color-gray_three);
+.icon-container:hover {
+  background-color: var(--color-gray_three);
 }
 
 .icon-searh {

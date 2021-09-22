@@ -384,8 +384,88 @@ function StateProvider(props) {
       const indexAllFotos = allFotos.findIndex(
         (element) => element.img_id === value
       );
-
       allFotos[indexAllFotos].trash.value = true;
+
+      // const noHayRepetidas = allFotos.map((element) => {
+      //   const elEncontrar_id = allFotos[indexAllFotos].repet.repet_imgs.find(
+      //     (elemeteArray) => elemeteArray === element.img_id
+      //   );
+      //   if (elEncontrar_id) {
+      //     // console.log("elEncontrar_id, find =>");
+      //     // console.log(elEncontrar_id);
+
+      //     const elementoAeliminarReferenciaRepetida = allFotos.find(
+      //       (element) => element.img_id === elEncontrar_id
+      //     );
+
+      //     // console.log(" => AEliminar_info_repetida => ");
+      //     // console.log(elementoAeliminarReferenciaRepetida);
+
+      //     const elementoAeliminarReferenciaRepetida_index =
+      //       elementoAeliminarReferenciaRepetida.repet.repet_imgs.findIndex(
+      //         (element) => element === elEncontrar_id
+      //       );
+
+      //     // console.log(
+      //     //   " => elementoAeliminarReferenciaRepetida_index => ",
+      //     //   elementoAeliminarReferenciaRepetida_index
+      //     // );
+
+      //     elementoAeliminarReferenciaRepetida.repet.repet_imgs.splice(
+      //       elementoAeliminarReferenciaRepetida_index - 1,
+      //       elementoAeliminarReferenciaRepetida_index + 1
+      //     );
+
+      //     // console.log("Elemento eliminado");
+      //     // console.log(elementoAeliminarReferenciaRepetida);
+
+      //     if (
+      //       elementoAeliminarReferenciaRepetida.repet.repet_imgs.length === 0
+      //     ) {
+      //       elementoAeliminarReferenciaRepetida.repet.val = false;
+      //     }
+
+      //     // console.log("hay repetidas es: ", element.img_id);
+      //     return elementoAeliminarReferenciaRepetida;
+      //   }
+
+      //   // if (element.img_id === allFotos[indexAllFotos].img_id) {
+      //   //   console.log("funciono: ");
+      //   //   console.log(element);
+
+      //   //   // const index =
+      //   //   //   element.repet.repet_imgs.findIndex(
+      //   //   //     (adentro_element) => adentro_element.img_id === element.img_id
+      //   //   //   );
+      //   //   // const index = element.repet.repet_imgs; si
+      //   //   const index = allFotos[indexAllFotos].repet.repet_imgs;
+
+      //   //   console.log(" (===) de index => ");
+      //   //   console.log(index);
+
+      //   //   // element.repet.repet_imgs.splice(
+      //   //   //   index - 1,
+      //   //   //   index + 1
+      //   //   // );
+
+      //   //   // console.log(
+      //   //   //   "Elemento eliminado de element.img_id === allFotos[indexAllFotos].img_id"
+      //   //   // );
+      //   //   // console.log(element);
+      //   //   // if (
+      //   //   //   element.repet.repet_imgs.length === 0
+      //   //   // ) {
+      //   //   //   element.repet.val = false;
+      //   //   // }
+
+      //   //   console.log("() hay repetidas es: ", element.img_id);
+      //   //   return element;
+      //   // }
+
+      //   return element;
+      // });
+
+      // console.log("noHayRepetidas => ", noHayRepetidas);
 
       AgregarValores(allFotos);
 

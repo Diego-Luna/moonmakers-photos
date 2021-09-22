@@ -7,12 +7,10 @@ import "../../assets/styles/components/langind.css";
 import ImgPhote from "../../assets/img/devicesMobile.png";
 import ImgTablet from "../../assets/img/tablet.png";
 import ImgSearch from "../../assets/img/search.png";
-import imgCompartir from "../../assets/img/comparte.png";
+import imgCompartir from "../../assets/img/comparte.jpg";
 import imgClean from "../../assets/img/clean.png";
-
 import LogoMoonMakers from "../../assets/img/MoonMakers.png";
-
-// import imagIntro from "../../assets/img/Inicio-3.gif";
+import imagIntro from "../../assets/img/Inicio.jpg";
 
 function LangindUI() {
   useEffect(() => {
@@ -26,15 +24,15 @@ function LangindUI() {
     <React.Fragment>
       {/* intro a about */}
       <section className="secction intro ">
-        {/* <section className="animate__animated animate__bounceInDown secction intro "> */}
         {/* imagen de ejemplo de computadora */}
-        {/* <img
-          className="ImgSearch"
-          style={{ width: "500px" }}
-          src={imagIntro}
-          alt="ejemplo de busqueda en las fotos por AI"
-        /> */}
-        <div data-aos="zoom-in">
+        <figure className="intro-fondo-container">
+          <img
+            className=" intro-fondo-img"
+            src={imagIntro}
+            alt="ejemplo de busqueda en las fotos por AI"
+          />
+        </figure>
+        <div data-aos="zoom-in" className="intro-fondo-center">
           <h1>
             El hogar de tus <br /> recuerdos
           </h1>
@@ -171,10 +169,10 @@ function LangindUI() {
               </g>
             </g>
           </svg>
-          <h2>Encuentra las fotos mas rapido</h2>
+          <h2>Encuentra las fotos más rápido</h2>
           <p>
-            Tus fotos se organizan automaticamente y están <br /> disponibles
-            para busquedas para que las encuentres <br /> facilmente
+            Tus fotos se organizan automáticamente y están <br /> disponibles
+            para busquedas para que las encuentres <br /> fácilmente
           </p>
           <figure
             data-aos="zoom-in-up"
@@ -255,7 +253,7 @@ function LangindUI() {
           </svg>
 
           <h2 className="text-center">
-            Guarda y comparte facilmente <br /> lo que realmente te importa
+            Guarda y comparte fácilmente <br /> lo que realmente te importa
           </h2>
 
           <p>Comparte fotos y álbumes con amigos y familiares.</p>
@@ -283,11 +281,12 @@ function LangindUI() {
             alt=""
           />
           <h2>
-            Edita tus <br /> recuerdos para <br /> darles vida
+            Cuida tus <br /> recuerdos con <br /> Clean AI
           </h2>
           <p>
-            Da al momento perfecto el acabado perfecto con las herramientas de
-            edición y los filtros inteligentes
+            Usa la inteligencia artificial, para cuidar tus recuerdos y
+            almacenamiento. Usando Clean AI, lograrás saber que fotos están
+            duplicadas y tu decides cual conservar deseas conservar.
           </p>
         </div>
         <figure
