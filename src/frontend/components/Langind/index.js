@@ -287,7 +287,7 @@ function LangindUI() {
           <p>
             Usa la inteligencia artificial, para cuidar tus recuerdos y
             almacenamiento. Usando Clean AI, lograrás saber que fotos están
-            duplicadas y tu decides cual conservar deseas conservar.
+            duplicadas y tu decides cual conservar.
           </p>
         </div>
         <figure
@@ -311,7 +311,7 @@ function LangindUI() {
             <img src={LogoMoonMakers} alt="Logo de MoonMakers Fotos" />
           </figure>
           <h2>
-            Saca el máximo partido de tus recuerdos <br /> con Google Fotos
+            Saca el máximo partido de tus recuerdos <br /> con MoonMakers Fotos
           </h2>
           <BotomBlue url="/photos/" text="Ir a MoonMakers Fotos" />
         </div>
