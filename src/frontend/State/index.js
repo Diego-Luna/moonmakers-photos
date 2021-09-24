@@ -469,7 +469,8 @@ function StateProvider(props) {
 
       AgregarValores(allFotos);
 
-      fetch(`http://localhost:3000/api/photos/${value}`, {
+      // fetch(`http://localhost:3000/api/photos/${value}`, {
+      fetch(`http://34.94.225.12/api/photos/${value}`, {
         method: "PUT", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -485,7 +486,8 @@ function StateProvider(props) {
     } else if (elemento.trash.value === true) {
       console.log(" in el if to fetch a delete");
 
-      fetch(`http://localhost:3000/api/photos/${value}`, {
+      // fetch(`http://localhost:3000/api/photos/${value}`, {
+      fetch(`http://34.94.225.12/api/photos/${value}`, {
         method: "DELETE", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -503,7 +505,8 @@ function StateProvider(props) {
   const Datosfiltrados = (value) => {
     // console.log("search.value: ", value);
     if (value != "") {
-      fetch(`http://localhost:3000/api/photos/${value}`, {
+      // fetch(`http://localhost:3000/api/photos/${value}`, {
+      fetch(`http://34.94.225.12/api/photos/${value}`, {
         method: "GET", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -657,7 +660,7 @@ function StateProvider(props) {
 
   const llamarApiDatosAll = async () => {
     console.log("conectando con la api");
-    fetch("http://localhost:3000/api/photos", {
+    fetch("http://34.94.225.12/api/photos", {
       method: "GET", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -698,7 +701,8 @@ function StateProvider(props) {
       console.log("CambioInputSubir => value =>  ");
       console.log(value.files);
 
-      fetch("http://localhost:3000/api/photos", {
+      // fetch("http://localhost:3000/api/photos", {
+      fetch("http://34.94.225.12/api/photos", {
         method: "POST",
         body: formData,
       })
