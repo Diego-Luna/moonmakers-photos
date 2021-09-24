@@ -1,6 +1,6 @@
-import About from "../containers/About.jsx";
+import About from "../containers/about.jsx";
 import Photos from "../containers/photos.jsx";
-import NotFound from "../containers/NotFound.jsx";
+import NotFound from "../containers/notfound.jsx";
 
 const routes = [
   {
@@ -8,11 +8,11 @@ const routes = [
     path: "/",
     component: About,
   },
-  {
-    exact: true,
-    path: "/photos",
-    component: Photos,
-  },
+  // {
+  //   exact: true,
+  //   path: "/photos",
+  //   component: Photos,
+  // },
   {
     exact: true,
     path: "/photos/",

@@ -1,8 +1,8 @@
 import React from "react";
-import ImgContent from "./ImgContent.jsx";
-import Menu from "../components/Menu";
-import MenuFotos from "../components/MenuFotos";
-import { Modal } from "../components/Modal";
+import ImgContent from "./imgcontent.jsx";
+import Menu from "../components/menu";
+import MenuFotos from "../components/menufotos";
+import { Modal } from "../components/modal";
 
 // import { StateContex } from "../";
 import { StateContex } from "../state";

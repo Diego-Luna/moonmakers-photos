@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Search from "./Search";
-import User from "./SeccionUser";
+import Search from "./search";
+import User from "./seccionuser";
 
 import MoonMakerPhotos from "../../assets/img/MoonMakers.png";
 // import "../../assets/styles/components/menu.css";
 import "../../assets/styles/components/menu.css";
-import BotomBlue from "../General/Buttons/BotomBlue";
+import BotomBlue from "../general/buttons/botomblue";
 
 function Menu({ enPhotos }) {
   const URLLogo = () => {

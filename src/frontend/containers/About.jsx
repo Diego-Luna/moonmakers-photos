@@ -1,9 +1,9 @@
 import React from "react";
 
 // components
-import Menu from "../components/Menu";
-import Langind from "../components/Langind";
-import Footer from "../components/Footer";
+import Menu from "../components/menu";
+import Langind from "../components/langind";
+import Footer from "../components/footer";
 
 import { StateContex } from "../state";
 

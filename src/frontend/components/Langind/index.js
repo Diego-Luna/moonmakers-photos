@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 
-import BotomBlue from "../General/Buttons/BotomBlue";
+import BotomBlue from "../general/buttons/botomblue";
 import "../../assets/styles/components/langind.css";
 
 import ImgPhote from "../../assets/img/devicesMobile.png";

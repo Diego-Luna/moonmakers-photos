@@ -3,7 +3,7 @@ import React from "react";
 // importamos neustro contexto
 import { StateContex } from "../state";
 
-import BotomStateGray from "../components/General/Buttons/BotomStateGray";
+import BotomStateGray from "./general/buttons/botomstategray";
 
 import "../assets/styles/components/menuFotos.css";
 

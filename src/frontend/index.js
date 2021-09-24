@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./routes/App";
+import App from "./routes/app";
 
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";

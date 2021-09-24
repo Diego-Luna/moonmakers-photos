@@ -2,17 +2,17 @@ import React from "react";
 import { StateContex } from "../state";
 import { useParams } from "react-router-dom";
 
-import NotContentFotos from "../components/notContetent/FotosAll";
-import NotContentSearch from "../components/notContetent/Explorar";
-import NotContentSharing from "../components/notContetent/Sharing";
-import NotContentFavoritos from "../components/notContetent/Favoritos";
-import NotContentAlbums from "../components/notContetent/Albums";
-import NotContentArchive from "../components/notContetent/Archive";
-import NotContentTrash from "../components/notContetent/Trash";
-import NotContentUtils from "../components/notContetent/Utils";
+import NotContentFotos from "../components/notContetent/fotosall";
+import NotContentSearch from "../components/notContetent/explorar";
+import NotContentSharing from "../components/notContetent/sharing";
+import NotContentFavoritos from "../components/notContetent/favoritos";
+import NotContentAlbums from "../components/notContetent/albums";
+import NotContentArchive from "../components/notContetent/archive";
+import NotContentTrash from "../components/notContetent/trash";
+import NotContentUtils from "../components/notContetent/utils";
 
-import AllFotos from "../components/Fotos";
-import LandingSearch from "../components/LandingSearch";
+import AllFotos from "../components/fotos";
+import LandingSearch from "../components/landingsearch";
 
 import "../assets/styles/container/ImgContent.css";
 
