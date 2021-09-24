@@ -1,5 +1,5 @@
 import express from "express";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import webpack from "webpack";
 import helmet from "helmet";
 
@@ -10,16 +10,18 @@ import { renderRoutes } from "react-router-config";
 import { StaticRouter } from "react-router-dom";
 import serverRoutes from "../frontend/routes/serverRoutes";
 import { StateProvider } from "../frontend/state/index";
+const { config } = require("./config");
 
 // import initialState from '../frontend/initialState';
 import getManifest from "./getManifest";
 
-dotenv.config();
+// dotenv.config();
 
-const { ENV, PORT } = process.env;
+// const { ENV, PORT } = process.env;
+
 const app = express();
 
-if (ENV === "development") {
+if (config.env === "development") {
   console.log("Development config");
   const webpackConfig = require("../../webpack.config.js");
   const webpackDevMiddleware = require("webpack-dev-middleware");
@@ -103,7 +105,7 @@ const renderApp = (req, res) => {
 
 app.get("*", renderApp);
 
-app.listen(PORT, (err) => {
+app.listen(config.port, (err) => {
   if (err) console.log(err);
-  else console.log(`Server running on port ${PORT}`);
+  else console.log(`Server running on port ${config.port}`);
 });
