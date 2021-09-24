@@ -4,8 +4,10 @@
   "description": "Prototipo funcional de Google Photos, para el INSIDE Google Cloud 21",
   "main": "index.js",
   "scripts": {
+    "on": "webpack --mode production && node src/server/index",
     "build": "webpack --mode production",
-    "start": "npx webpack-dev-server",
+    "start:old": "npx webpack-dev-server",
+    "start": "node src/server/index",
     "start:ssr": "nodemon src/server/index",
     "build:ssr": "webpack-cli --config webpack.config.js"
   },
